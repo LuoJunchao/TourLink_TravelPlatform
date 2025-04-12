@@ -1,0 +1,10 @@
+server:
+  port: 9085
+
+spring:
+  application:
+    name: social-service
+cloud:
+  nacos:
+    discovery:
+      server-addr: localhost:8848
