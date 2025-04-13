@@ -6,18 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="social-service" />
+        <module name="attraction-service" />
+        <module name="data-platform-service" />
+        <module name="routing-service" />
+        <module name="user-service" />
+        <module name="gateway-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="attraction-service" target="17" />
-      <module name="data-platform-service" target="17" />
       <module name="dataPlatform-service" target="17" />
       <module name="gataway-service" target="17" />
-      <module name="gateway-service" target="17" />
-      <module name="routing-service" target="17" />
-      <module name="social-service" target="17" />
       <module name="spring-cloud-alibaba" target="17" />
-      <module name="user-service" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

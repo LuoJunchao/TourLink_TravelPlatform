@@ -1,0 +1,9 @@
+server:
+  port: 9083
+spring:
+  application:
+    name: routing-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
