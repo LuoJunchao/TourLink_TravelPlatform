@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="Merge remote-tracking branch 'origin/XJY' into XJY&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Edge.java&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Node.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogComment.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogLike.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogShare.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Message.java">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="Merge remote-tracking branch 'origin/XJY' into XJY" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +82,7 @@
     &quot;Spring Boot.RoutingServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SocialServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;XJY 上的 #2&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -325,7 +323,7 @@
       <workItem from="1744609468962" duration="5391000" />
       <workItem from="1744616774415" duration="98000" />
       <workItem from="1744635800810" duration="4310000" />
-      <workItem from="1744703179207" duration="10732000" />
+      <workItem from="1744703179207" duration="10897000" />
     </task>
     <task id="LOCAL-00001" summary="entity 1.0">
       <option name="closed" value="true" />
@@ -359,7 +357,31 @@
       <option name="project" value="LOCAL" />
       <updated>1744714055156</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <option name="closed" value="true" />
+      <created>1744721900214</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744721900214</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <option name="closed" value="true" />
+      <created>1744721908892</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1744721908892</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <option name="closed" value="true" />
+      <created>1744721914944</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1744721914944</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,7 +394,8 @@
     <MESSAGE value="entity 1.0" />
     <MESSAGE value="entity 2.0" />
     <MESSAGE value="Merge remote-tracking branch 'origin/XJY' into XJY&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Edge.java&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Node.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogComment.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogLike.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogShare.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Message.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/XJY' into XJY&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Edge.java&#10;#&#9;Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/Node.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogComment.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogLike.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogShare.java&#10;#&#9;Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Message.java" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/XJY' into XJY" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/XJY' into XJY" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
