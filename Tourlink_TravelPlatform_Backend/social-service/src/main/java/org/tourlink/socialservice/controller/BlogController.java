@@ -41,4 +41,5 @@ public class BlogController {
     public ResponseEntity<List<BlogSummary>> getBlogRanking(@RequestParam(defaultValue = "hot") String sortBy) {
         return null;
     }
+
 }

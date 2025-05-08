@@ -19,8 +19,4 @@ public class BlogResponse {
     private Integer shareCount;
     private Integer commentCount;
 
-    // 可选：作者信息（从 user-service 拉取）
-    private String userName;
-    private String userAvatar;
-
 }

@@ -4,7 +4,45 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="Merge remote-tracking branch 'origin/XJY' into XJY" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/LikeResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/repository/BlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/repository/CommentRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/repository/LikeRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/repository/MessageRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/repository/ShareRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/BlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/LikeService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/MessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/ShareService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/LikeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/ShareServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_4_15_20_56____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/___2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在变基之前未提交的更改_[更改]2/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_4_15_20_56_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/LikeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/BlogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/BlogResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/CommentRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/CommentRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/CommentResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/dto/CommentResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogComment.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/BlogComment.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +69,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -82,7 +122,7 @@
     &quot;Spring Boot.RoutingServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SocialServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;XJY 上的 #2&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -94,7 +134,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;http.proxy&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -103,6 +143,11 @@
     ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.tourlink.socialservice.dto" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -112,7 +157,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SocialServiceApplication">
+  <component name="RunManager" selected="Spring Boot.RoutingServiceApplication">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -148,33 +193,6 @@
       <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="Python.FlaskServer">
-      <module name="dataPlatform-service" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="dataPlatform-service" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="dataPlatform-service" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -198,47 +216,19 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="AttractionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="attraction-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.attractionservice.AttractionServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DataPlatformServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="data-platform-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.dataplatformservice.DataPlatformServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="gateway-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.gatewayservice.GatewayServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RoutingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="routing-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.routingservice.RoutingServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SocialServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="social-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.socialservice.SocialServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.userservice.UserServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="dataPlatform-service" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
       <module name="dataPlatform-service" />
@@ -289,10 +279,73 @@
       <option name="USE_PATTERN" value="false" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="dataPlatform-service" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="dataPlatform-service" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AttractionServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="attraction-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.attractionservice.AttractionServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommonModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.commonmodule.CommonModuleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataPlatformServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="data-platform-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.dataplatformservice.DataPlatformServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GatewayServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.gatewayservice.GatewayServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoutingServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="routing-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.routingservice.RoutingServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SocialServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="social-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.socialservice.SocialServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.userservice.UserServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.CommonModuleApplication" />
       <item itemvalue="Spring Boot.AttractionServiceApplication" />
       <item itemvalue="Spring Boot.DataPlatformServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.RoutingServiceApplication" />
       <item itemvalue="Spring Boot.SocialServiceApplication" />
       <item itemvalue="Spring Boot.UserServiceApplication" />
@@ -301,8 +354,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.24978.46" />
-        <option value="bundled-js-predefined-d6986cc7102b-76f8388c3a79-JavaScript-IU-243.24978.46" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
@@ -324,6 +377,29 @@
       <workItem from="1744616774415" duration="98000" />
       <workItem from="1744635800810" duration="4310000" />
       <workItem from="1744703179207" duration="10897000" />
+      <workItem from="1744722080793" duration="428000" />
+      <workItem from="1744789140830" duration="2802000" />
+      <workItem from="1745137432708" duration="190000" />
+      <workItem from="1745205932647" duration="533000" />
+      <workItem from="1745206475100" duration="89000" />
+      <workItem from="1745316394215" duration="20000" />
+      <workItem from="1745653514772" duration="693000" />
+      <workItem from="1745654229295" duration="18000" />
+      <workItem from="1745654370697" duration="38000" />
+      <workItem from="1745654498148" duration="48000" />
+      <workItem from="1745654557310" duration="310000" />
+      <workItem from="1745654879970" duration="72000" />
+      <workItem from="1746595056216" duration="1260000" />
+      <workItem from="1746596336838" duration="932000" />
+      <workItem from="1746597526414" duration="270000" />
+      <workItem from="1746597828403" duration="521000" />
+      <workItem from="1746598468993" duration="1109000" />
+      <workItem from="1746599647781" duration="2410000" />
+      <workItem from="1746603269904" duration="5572000" />
+      <workItem from="1746620397141" duration="4218000" />
+      <workItem from="1746627498640" duration="7476000" />
+      <workItem from="1746675299472" duration="861000" />
+      <workItem from="1746689748400" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="entity 1.0">
       <option name="closed" value="true" />
@@ -381,7 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1744721914944</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <option name="closed" value="true" />
+      <created>1744722299109</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1744722299109</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/XJY' into XJY">
+      <option name="closed" value="true" />
+      <created>1744722357210</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1744722357210</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

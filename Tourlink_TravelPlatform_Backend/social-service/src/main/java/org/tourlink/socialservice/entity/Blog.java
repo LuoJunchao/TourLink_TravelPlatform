@@ -38,6 +38,12 @@ public class Blog {
     @Column(name = "publish_time", nullable = false)
     private LocalDateTime publishTime;
 
+    @Column(name = "like_count", columnDefinition = "INT DEFAULT 0")
+    private Integer likeCount = 0;
+
+    @Column(name = "comment_count", columnDefinition = "INT DEFAULT 0")
+    private Integer commentCount = 0;
+
     @Column(name = "view_count", columnDefinition = "INT DEFAULT 0")
     private Integer viewCount = 0;
 
