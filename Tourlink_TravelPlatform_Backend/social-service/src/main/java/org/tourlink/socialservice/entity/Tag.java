@@ -3,6 +3,9 @@ package org.tourlink.socialservice.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @Entity
 @Table(name = "tag")
@@ -24,5 +27,14 @@ public class Tag {
 
     @Column(name = "usage_count", columnDefinition = "INT DEFAULT 0")
     private Integer usageCount = 0; // 被引用次数，可用于热门标签排序
+
+    @OneToMany(mappedBy = "tag", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogTag> blogTags = new ArrayList<>();
+
+    public Tag() {}
+
+    public Tag(String name) {
+        this.name = name;
+    }
 
 }

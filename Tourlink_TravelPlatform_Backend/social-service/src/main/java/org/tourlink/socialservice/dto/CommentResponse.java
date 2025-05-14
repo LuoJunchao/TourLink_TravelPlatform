@@ -17,7 +17,7 @@ public class CommentResponse {
 
     private LocalDateTime commentTime;
 
-    public static CommentResponse fromBlogComment(BlogComment blogComment) {
+    public static CommentResponse convertToResponse(BlogComment blogComment) {
         CommentResponse commentResponse = new CommentResponse();
 
         commentResponse.setCommentId(blogComment.getCommentId());

@@ -50,7 +50,7 @@ public class CommentServiceImpl implements CommentService {
         blogRepository.incrementCommentCount(request.getBlogId());
 
         // 4. 返回 DTO
-        return CommentResponse.fromBlogComment(blogComment);
+        return CommentResponse.convertToResponse(blogComment);
     }
 
     /**
@@ -79,7 +79,7 @@ public class CommentServiceImpl implements CommentService {
         Page<BlogComment> comments = commentRepository.findByBlog(blog, pageable);
 
         // 4. 将 Entity 分页对象转换为 DTO 分页对象
-        return comments.map(CommentResponse::fromBlogComment);
+        return comments.map(CommentResponse::convertToResponse);
     }
 
     @Override

@@ -8,10 +8,10 @@ import lombok.Data;
 @Data
 public class CommentRequest {
 
-    @NotNull
+    @NotNull(message = "博客 ID 不能为空")
     private Long blogId;
 
-    @NotBlank
+    @NotBlank(message = "评论内容不能为空")
     private String content;
 
 }

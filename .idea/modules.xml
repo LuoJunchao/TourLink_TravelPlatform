@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/dataPlatform-service/dataPlatform-service.iml" filepath="$PROJECT_DIR$/dataPlatform-service/dataPlatform-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/gataway-service/gataway-service.iml" filepath="$PROJECT_DIR$/gataway-service/gataway-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/social-service/social-service.iml" filepath="$PROJECT_DIR$/social-service/social-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-alibaba.iml" filepath="$PROJECT_DIR$/spring-cloud-alibaba.iml" />
     </modules>
   </component>
