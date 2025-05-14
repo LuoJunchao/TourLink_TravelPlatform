@@ -1,9 +1,0 @@
-server:
-  port: 9081
-spring:
-  application:
-    name: data-platform-service
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
