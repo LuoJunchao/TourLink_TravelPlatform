@@ -1,6 +1,7 @@
 package org.tourlink.socialservice.controller;
 
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -8,17 +9,12 @@ import org.tourlink.socialservice.dto.CommentRequest;
 import org.tourlink.socialservice.dto.CommentResponse;
 import org.tourlink.socialservice.service.CommentService;
 
-import java.util.List;
-
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/comments")
 public class CommentController {
 
     private final CommentService commentService;
-
-    public CommentController(CommentService commentService) {
-        this.commentService = commentService;
-    }
 
     // 添加评论
     @PostMapping
@@ -53,7 +49,6 @@ public class CommentController {
     public ResponseEntity<Integer> getCommentCount(@PathVariable Long blogId) {
         return ResponseEntity.ok(commentService.getCommentCount(blogId));
     }
-
 
 }
 

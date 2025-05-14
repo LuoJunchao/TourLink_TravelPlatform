@@ -21,4 +21,13 @@ public class BlogTag {
     @JoinColumn(name = "tag_id", nullable = false)
     private Tag tag;
 
+    public BlogTag() {
+
+    }
+
+    public BlogTag(Blog blog, Tag tag) {
+        this.blog = blog;
+        this.tag = tag;
+    }
+
 }

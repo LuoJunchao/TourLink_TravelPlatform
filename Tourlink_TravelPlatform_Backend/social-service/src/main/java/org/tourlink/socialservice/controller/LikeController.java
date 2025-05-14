@@ -1,19 +1,17 @@
 package org.tourlink.socialservice.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.tourlink.socialservice.dto.LikeResponse;
 import org.tourlink.socialservice.service.LikeService;
 
 @RestController
+@RequiredArgsConstructor
 @RequestMapping("/api/likes")
 public class LikeController {
 
     private final LikeService likeService;
-
-    public LikeController(LikeService likeService) {
-        this.likeService = likeService;
-    }
 
     // 点赞
     @PostMapping
