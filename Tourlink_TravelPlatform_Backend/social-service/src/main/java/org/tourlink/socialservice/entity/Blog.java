@@ -6,6 +6,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -32,21 +33,37 @@ public class Blog {
     @Column(name = "images", columnDefinition = "JSON")
     private List<String> images;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL)
-    private List<BlogTag> blogTags;
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<BlogTag> blogTags = new ArrayList<>();
 
     @Column(name = "publish_time", nullable = false)
     private LocalDateTime publishTime;
 
+    @Column(name = "like_count", columnDefinition = "INT DEFAULT 0")
+    private Integer likeCount = 0;
+
+    @Column(name = "comment_count", columnDefinition = "INT DEFAULT 0")
+    private Integer commentCount = 0;
+
     @Column(name = "view_count", columnDefinition = "INT DEFAULT 0")
     private Integer viewCount = 0;
+
+    @Column(name = "share_count", columnDefinition = "INT DEFAULT 0")
+    private Integer shareCount = 0;
 
     @Column(name = "hot_score", columnDefinition = "DOUBLE DEFAULT 0")
     private Double hotScore = 0.0; // 推荐权重（博客热度）
 
+    // 添加标签
+    public void addTag(Tag tag) {
+        BlogTag blogTag = new BlogTag(this, tag);
+        blogTags.add(blogTag);
+        tag.getBlogTags().add(blogTag);
+    }
+
 }
 
-// JSON列表转换器
+// JSON 列表转换器
 @Converter
 class StringListConverter implements AttributeConverter<List<String>, String> {
     @Override

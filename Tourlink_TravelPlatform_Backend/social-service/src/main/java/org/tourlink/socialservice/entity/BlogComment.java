@@ -30,7 +30,4 @@ public class BlogComment {
     @Column(name = "comment_time", nullable = false)
     private LocalDateTime commentTime;
 
-    @Column(name = "parent_comment_id")
-    private Long parentCommentId;
-
 }

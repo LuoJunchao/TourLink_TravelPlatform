@@ -8,9 +8,9 @@ spring:
       discovery:
         server-addr: localhost:8848
   datasource:
-    url: jdbc:mysql://localhost:3306/tl_social_service?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://47.117.153.17:3306/tl_social_service?useSsL=false&serverTimezone=UTc
     username: root
-    password: zztxjy620
+    password: TourLink2025
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     show-sql: true
