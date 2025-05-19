@@ -1,9 +1,14 @@
-server:
-  port: 9080
 spring:
   application:
-    name: user-service
+    name: attraction-service
+  config:
+    import: nacos:attraction-service-dev.yml
   cloud:
     nacos:
       discovery:
         server-addr: localhost:8848
+        namespace: 50143100-6119-4971-8872-254459f306ff
+      config:
+        server-addr: localhost:8848
+        namespace: 50143100-6119-4971-8872-254459f306ff
+        file-extension: yml

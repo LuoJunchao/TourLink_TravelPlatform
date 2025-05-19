@@ -7,3 +7,4 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+        namespace: 50143100-6119-4971-8872-254459f306ff
