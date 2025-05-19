@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: social-service
+  datasource:
+    url: jdbc:mysql://47.117.153.17:3306/tl_social_service?useSsL=false&serverTimezone=UTc
+    username: root
+    password: TourLink2025
+    driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       discovery:
