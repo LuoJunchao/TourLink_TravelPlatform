@@ -1,9 +1,9 @@
 package org.tourlink.socialservice.entity;
 
-import com.alibaba.nacos.shaded.com.google.gson.Gson;
-import com.alibaba.nacos.shaded.com.google.gson.reflect.TypeToken;
+
 import jakarta.persistence.*;
 import lombok.Data;
+import org.tourlink.common.converter.StringListJsonConverter;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -29,9 +29,14 @@ public class Blog {
     private String content;
 
     // 图片 URL 列表使用 @Convert 存储为 JSON 字符串
-    @Convert(converter = StringListConverter.class)
+    @Convert(converter = StringListJsonConverter.class)
     @Column(name = "images", columnDefinition = "JSON")
     private List<String> images;
+
+    // 关联的景点 ID 列表（存储为 JSON 数组）
+    @Convert(converter = StringListJsonConverter.class)
+    @Column(name = "attraction_ids", columnDefinition = "JSON")
+    private List<Long> attractionIds;
 
     @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<BlogTag> blogTags = new ArrayList<>();
@@ -63,17 +68,3 @@ public class Blog {
 
 }
 
-// JSON 列表转换器
-@Converter
-class StringListConverter implements AttributeConverter<List<String>, String> {
-    @Override
-    public String convertToDatabaseColumn(List<String> list) {
-        return new Gson().toJson(list);
-    }
-
-    @Override
-    public List<String> convertToEntityAttribute(String json) {
-        return new Gson().fromJson(json, new TypeToken<List<String>>(){}.getType());
-    }
-
-}
