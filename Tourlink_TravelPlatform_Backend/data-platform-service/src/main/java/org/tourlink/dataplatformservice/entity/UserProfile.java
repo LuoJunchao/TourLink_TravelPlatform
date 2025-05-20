@@ -4,8 +4,9 @@ package org.tourlink.dataplatformservice.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.UpdateTimestamp;
-import org.tourlink.dataplatformservice.converter.StringDoubleMapJsonConverter;
-import org.tourlink.dataplatformservice.converter.StringListJsonConverter;
+import org.tourlink.common.converter.StringListJsonConverter;
+import org.tourlink.common.converter.StringDoubleMapJsonConverter;
+
 
 import java.time.LocalDateTime;
 import java.util.List;

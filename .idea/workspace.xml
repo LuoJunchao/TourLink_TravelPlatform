@@ -4,23 +4,92 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/JsonAttributeConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/StringDoubleMapJsonConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/StringListJsonConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserBehaviorLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" afterDir="false" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sshConfigs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/785f7c54-efd7-44fa-9672-797a81e4743d/storage_v2/_src_/schema/tl_routing_service.dRze8w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7ef24462-e740-4845-92d5-754fb6d15859/storage_v2/_src_/schema/tl_social_service.imhmGw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/com/commonmodule/CommonModuleApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/test/java/com/commonmodule/CommonModuleApplicationTests.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/JsonAttributeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/StringDoubleMapJsonConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/converter/StringListJsonConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/City.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/entity/City.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/entity/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/SocialServiceApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/controller/BlogController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/controller/CommentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/controller/LikeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/controller/MessageController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/controller/ShareController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/BlogRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/BlogResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/BlogSummary.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/ChatPreview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/CommentRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/CommentResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/LikeResponse$LikeResponseBuilder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/LikeResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/MessageRequest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/dto/MessageResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/Blog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogComment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogLike.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogRecommendation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogShare.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/BlogView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/Message.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/StringListConverter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/StringListConverter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/entity/Tag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/BlogRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/CommentRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/LikeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/MessageRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/ShareRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/repository/TagRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/BlogService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/CommentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/LikeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/MessageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/ShareService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/impl/BlogServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/impl/CommentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/impl/LikeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/social-service/target/classes/org/tourlink/socialservice/service/impl/ShareServiceImpl.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +117,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
@@ -71,8 +141,15 @@
     &quot;accountId&quot;: &quot;edee3a1c-1818-4110-9708-82a734744b54&quot;
   }
 }</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
@@ -87,6 +164,13 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Tourlink_TravelPlatform_Backend [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.routing-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.social-service [package].executor&quot;: &quot;Run&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -112,14 +196,24 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.editor&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\XJY\IdeaProjects\TourLink_TravelPlatform\Tourlink_TravelPlatform_Backend\social-service" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -129,7 +223,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SocialServiceApplication">
+  <component name="RunManager" selected="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -271,6 +365,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CommonModuleApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="common-module" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.common.CommonModuleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CommonModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="common-module" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.commonmodule.CommonModuleApplication" />
@@ -313,6 +414,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="mysql" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="routing-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="social-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend.nacos: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="nacos" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
+      <deployment type="docker-compose.yml">
+        <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -341,10 +508,36 @@
       <workItem from="1747309997087" duration="1143000" />
       <workItem from="1747411918187" duration="136000" />
       <workItem from="1747587585607" duration="6229000" />
+      <workItem from="1747594815030" duration="481000" />
+      <workItem from="1747650386180" duration="1047000" />
+      <workItem from="1747651459141" duration="252000" />
+      <workItem from="1747651726787" duration="7067000" />
+      <workItem from="1747670721872" duration="1624000" />
+      <workItem from="1747672367132" duration="3341000" />
+      <workItem from="1747676339992" duration="1118000" />
+      <workItem from="1747677495750" duration="3502000" />
+      <workItem from="1747681011730" duration="590000" />
+      <workItem from="1747681616529" duration="415000" />
+      <workItem from="1747682041303" duration="3456000" />
+      <workItem from="1747725350120" duration="16800000" />
+      <workItem from="1747745637417" duration="2313000" />
     </task>
+    <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
+      <option name="closed" value="true" />
+      <created>1747595003176</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1747595003176</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容" />
   </component>
 </project>
