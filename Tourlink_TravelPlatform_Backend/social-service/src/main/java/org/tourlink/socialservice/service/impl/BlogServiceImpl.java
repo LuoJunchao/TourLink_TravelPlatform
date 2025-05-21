@@ -55,8 +55,8 @@ public class BlogServiceImpl implements BlogService {
         // 1. 新建博客并设置初始值
         Blog blog = new Blog();
         blog.setUserId(request.getUserId());
-        blog.setTitle(request.getContent());
-        blog.setContent(request.getContent());
+        blog.setTitle(cleanContent(request.getTitle()));
+        blog.setContent(cleanContent(request.getContent()));
         blog.setImages(request.getImages() != null ? request.getImages() : new ArrayList<>());
         blog.setPublishTime(LocalDateTime.now());
         blog.setLikeCount(0);
@@ -190,10 +190,18 @@ public class BlogServiceImpl implements BlogService {
     }
 
     private String cleanTagName(String tagName) {
-        if (tagName.length() > MAX_TAG_LENGTH) {
-            return tagName.substring(0, MAX_TAG_LENGTH);
+        String cleaned = cleanContent(tagName);
+        if (cleaned.length() > MAX_TAG_LENGTH) {
+            return cleaned.substring(0, MAX_TAG_LENGTH);
         }
-        return tagName;
+        return cleaned;
+    }
+
+    private String cleanContent(String content) {
+        if (content == null) {
+            return null;
+        }
+        return content.replace("<", "&lt;").replace(">", "&gt;");
     }
 
     private Specification<Blog> buildSearchSpecification(String keyword, String searchType) {
