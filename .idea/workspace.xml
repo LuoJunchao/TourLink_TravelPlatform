@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="nacos已部署，对应配置文件已修改">
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2vacLIdzCRI8hJfc6hLWTEFRAa9" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -109,11 +107,11 @@
     "Spring Boot.RoutingServiceApplication.executor": "Run",
     "Spring Boot.SocialServiceApplication.executor": "Run",
     "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "XJY 上的 #2",
+    "git-widget-placeholder": "XJY",
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/XJY/大三下/专业方向综合项目/TourLink_TravelPlatform",
+    "last_opened_file_path": "C:/XJY/大三下/专业方向综合项目/TourLink_TravelPlatform/Tourlink_TravelPlatform_Backend",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -389,7 +387,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="social-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
@@ -400,6 +400,20 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" />
+      <item itemvalue="Docker.social-service/Dockerfile" />
+      <item itemvalue="Spring Boot.AttractionServiceApplication" />
+      <item itemvalue="Spring Boot.CommonModuleApplication" />
+      <item itemvalue="Spring Boot.DataPlatformServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.RoutingServiceApplication" />
+      <item itemvalue="Spring Boot.SocialServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />

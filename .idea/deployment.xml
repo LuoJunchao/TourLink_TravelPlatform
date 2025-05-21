@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" autoUpload="Always" remoteFilesAllowedToDisappearOnAutoupload="false" confirmBeforeUploading="false">
+    <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="remote">
         <serverdata>
           <mappings>
-            <mapping deploy="/tourlink/Tourlink_TravelPlatform" local="$PROJECT_DIR$/../../../../XJY/大三下/专业方向综合项目/TourLink_TravelPlatform/Tourlink_TravelPlatform_Backend" web="/" />
+            <mapping deploy="/tourlink/Tourlink_TravelPlatform" local="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend" web="/" />
           </mappings>
         </serverdata>
       </paths>
