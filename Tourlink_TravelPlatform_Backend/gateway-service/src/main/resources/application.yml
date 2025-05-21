@@ -6,4 +6,9 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: localhost:8848
+        server-addr: 47.117.153.17:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true  # 开启通过服务名自动转发
+          lower-case-service-id: true
