@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Tue May 20 10:14:17 CST 2025:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0196-eb78-62e8-00001ad6fca0 
+on database directory /Users/zmc/Downloads/Tourlink_TravelPlatform_Backend-XJYBase/nacos/data/derby-data with class loader org.springframework.boot.loader.LaunchedURLClassLoader@b1a58a3 
+Loaded from jar:file:/Users/zmc/Downloads/Tourlink_TravelPlatform_Backend-XJYBase/nacos/target/nacos-server.jar!/BOOT-INF/lib/derby-10.14.2.0.jar!/
+java.vendor=Oracle Corporation
+java.runtime.version=22.0.2+9-70
+user.dir=/Users/zmc/Downloads/Tourlink_TravelPlatform_Backend-XJYBase
+os.name=Mac OS X
+os.arch=aarch64
+os.version=14.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
