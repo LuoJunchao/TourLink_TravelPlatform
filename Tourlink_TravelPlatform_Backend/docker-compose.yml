@@ -11,6 +11,16 @@ services:
     networks:
       - tourlinkwork
 
+  routing-service:
+    build:
+      context: ./routing-service
+      dockerfile: Dockerfile
+    ports:
+      - "9083:9083"
+    container_name: routing-service
+    networks:
+      - tourlinkwork
+
 networks:
   tourlinkwork:
 
