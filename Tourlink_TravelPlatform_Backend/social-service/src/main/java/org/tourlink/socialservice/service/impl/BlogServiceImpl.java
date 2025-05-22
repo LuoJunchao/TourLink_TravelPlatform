@@ -55,7 +55,7 @@ public class BlogServiceImpl implements BlogService {
         // 1. 新建博客并设置初始值
         Blog blog = new Blog();
         blog.setUserId(request.getUserId());
-        blog.setTitle(request.getContent());
+        blog.setTitle(request.getTitle());
         blog.setContent(request.getContent());
         blog.setImages(request.getImages() != null ? request.getImages() : new ArrayList<>());
         blog.setPublishTime(LocalDateTime.now());
