@@ -22,6 +22,10 @@ public class BlogController {
 
     private final BlogService blogService;
 
+    @GetMapping("/hello")
+    public String sayHello() {
+        return "Hello from social-service!";
+    }
     // 发布博客
     @PostMapping
     public ResponseEntity<BlogResponse> publishBlog(@RequestBody @Valid BlogRequest request) {

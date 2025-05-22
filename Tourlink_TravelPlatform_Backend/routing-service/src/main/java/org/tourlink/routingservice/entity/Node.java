@@ -12,37 +12,33 @@ import java.math.BigDecimal;
 @Entity
 @Table(name = "node")
 public class Node {
+
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "node_id")
-    private String nodeId;
-
-    @ManyToOne
-    @JoinColumn(name = "city_id")
-    private City city;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name = "node_type", columnDefinition = "ENUM('SCENIC','HOTEL','TRAIN_STATION','AIRPORT')")
-    private NodeType nodeType;
+    private Long nodeId;
 
     @Column(name = "name", nullable = false)
     private String name;
 
-    @Column(name = "description", columnDefinition = "TEXT")
-    private String description; // 节点简要描述
+    @Enumerated(EnumType.STRING)
+    @Column(name = "type", nullable = false)
+    private NodeType type;
 
-    @Column(name = "open_time")
-    private String openTime; // 开放时间（如 09:00-18:00）
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "city_id")
+    private City city;
 
-    @Column(name = "close_time")
-    private String closeTime;
+    @Column(name = "address")
+    private String address;
 
-    @Column(name = "coordinates", columnDefinition = "POINT")
-    private Point coordinates;
+    @Column(name = "latitude", nullable = false)
+    private Double latitude;
 
-    @Column(name = "time_cost", columnDefinition = "INT")
-    private Integer timeCost; // 分钟
+    @Column(name = "longitude", nullable = false)
+    private Double longitude;
 
-    @Column(name = "money_cost", precision = 10, scale = 2)
-    private BigDecimal moneyCost;
+    // Getters and Setters
 }
+
 
