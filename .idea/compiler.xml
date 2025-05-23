@@ -15,15 +15,6 @@
         <module name="user-service" />
         <module name="data-platform-service" />
       </profile>
-      <profile name="Annotation profile for Tourlink_TravelPlatform_Backend" enabled="true">
-        <sourceOutputDir name="target/generated-sources/annotations" />
-        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
-        </processorPath>
-        <module name="common-module" />
-      </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="dataPlatform-service" target="17" />
@@ -34,7 +25,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="attraction-service" options="" />
-      <module name="common-module" options="-parameters" />
+      <module name="common-module" options="" />
       <module name="dataPlatform-service" options="" />
       <module name="gataway-service" options="" />
       <module name="routing-service" options="" />

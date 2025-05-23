@@ -3,7 +3,36 @@ server:
 spring:
   application:
     name: user-service
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://47.117.153.17:3306/tl_user_service?useSSL=false&serverTimezone=UTC
+    username: root
+    password: TourLink@2025
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 5
+      idle-timeout: 300000
+      connection-timeout: 20000
+      connection-test-query: SELECT 1
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        enable_lazy_load_no_trans: true
+        dialect: org.hibernate.dialect.MySQLDialect
+        jdbc:
+          time_zone: Asia/Shanghai
+    open-in-view: false
   cloud:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
+
+# JWT配置
+jwt:
+  secret: TourlinkSecretKey123456789012345678901234567890TourlinkSecretKey123456789012345678901234567890
+  expiration: 86400000  # 24小时

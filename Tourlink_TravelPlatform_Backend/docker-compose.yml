@@ -1,13 +1,21 @@
-version: '3.8'
-
 services:
-  social-service:
+  attraction-service:
     build:
-      context: ./social-service
+      context: ./attraction-service
       dockerfile: Dockerfile
     ports:
-      - "9084:9084"
-    container_name: social-service
+      - "9080:9080"
+    container_name: attraction-service
+    networks:
+      - tourlinkwork
+
+  data-platform-service:
+    build:
+      context: ./data-platform-service
+      dockerfile: Dockerfile
+    ports:
+      - "9081:9081"
+    container_name: data-platform-service
     networks:
       - tourlinkwork
 
@@ -18,6 +26,26 @@ services:
     ports:
       - "9083:9083"
     container_name: routing-service
+    networks:
+      - tourlinkwork
+
+  social-service:
+    build:
+      context: ./social-service
+      dockerfile: Dockerfile
+    ports:
+      - "9084:9084"
+    container_name: social-service
+    networks:
+      - tourlinkwork
+
+  user-service:
+    build:
+      context: ./user-service
+      dockerfile: Dockerfile
+    ports:
+      - "9085:9085"
+    container_name: user-service
     networks:
       - tourlinkwork
 
