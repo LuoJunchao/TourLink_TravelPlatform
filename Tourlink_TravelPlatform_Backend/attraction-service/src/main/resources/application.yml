@@ -28,12 +28,7 @@ spring:
         jdbc.batch_size: 50
         order_inserts: true
         order_updates: true
-        # 连接池设置
-        connection.provider_class: org.hibernate.hikaricp.internal.HikariCPConnectionProvider
-        # 二级缓存设置
-        cache.use_second_level_cache: false
-        # 统计信息
-        generate_statistics: false
+    open-in-view: false
   cloud:
     nacos:
       discovery:
