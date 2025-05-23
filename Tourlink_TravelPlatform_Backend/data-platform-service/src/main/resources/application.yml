@@ -7,3 +7,16 @@ spring:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
+  datasource:
+    url: jdbc:mysql://47.117.153.17:3306/tl_data_platform_service?useSSL=false&serverTimezone=UTC
+    username: root
+    password: TourLink@2025
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update

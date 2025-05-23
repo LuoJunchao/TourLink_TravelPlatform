@@ -5,15 +5,167 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="5.14">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/converter/JsonAttributeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/converter/StringDoubleMapJsonConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/converter/StringListJsonConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserBehaviorLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cce006bb-515c-4187-b750-e4b4de9b7e56/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cce006bb-515c-4187-b750-e4b4de9b7e56/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cce006bb-515c-4187-b750-e4b4de9b7e56/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cce006bb-515c-4187-b750-e4b4de9b7e56/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cce006bb-515c-4187-b750-e4b4de9b7e56/storage_v2/_src_/schema/tl_routing_service.dRze8w.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb550bac-2bb6-45b1-a0d4-bf6f05fd3c84.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eb550bac-2bb6-45b1-a0d4-bf6f05fd3c84.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/security/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/security/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/.bin/semver" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/.bin/semver.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/.bin/semver.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/.package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/.npmignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/.travis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/buffer-equal-constant-time/test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/CODEOWNERS" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/src/ecdsa-sig-formatter.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/src/ecdsa-sig-formatter.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ecdsa-sig-formatter/src/param-bytes-for-alg.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/decode.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/JsonWebTokenError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/NotBeforeError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/TokenExpiredError.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/asymmetricKeyDetailsSupported.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/psSupported.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/rsaPssKeyDetailsSupported.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/timespan.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/lib/validateAsymmetricKey.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/sign.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jsonwebtoken/verify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jwa/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jwa/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jwa/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jwa/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/lib/data-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/lib/sign-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/lib/tostring.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/lib/verify-stream.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/jws/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.includes/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.includes/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.includes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.includes/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isboolean/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isboolean/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isboolean/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isboolean/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isinteger/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isinteger/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isinteger/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isinteger/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isnumber/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isnumber/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isnumber/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isnumber/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isplainobject/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isplainobject/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isplainobject/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isplainobject/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isstring/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isstring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isstring/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.isstring/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.once/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.once/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.once/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/lodash.once/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ms/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ms/license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ms/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/ms/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/safe-buffer/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/safe-buffer/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/safe-buffer/index.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/safe-buffer/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/safe-buffer/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/bin/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/classes/comparator.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/classes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/classes/range.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/classes/semver.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/clean.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/cmp.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/coerce.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/compare-build.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/compare-loose.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/compare.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/diff.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/eq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/gt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/gte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/inc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/lt.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/lte.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/major.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/minor.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/neq.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/parse.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/patch.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/prerelease.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/rcompare.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/rsort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/satisfies.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/sort.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/functions/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/constants.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/debug.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/identifiers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/lrucache.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/parse-options.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/internal/re.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/preload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/range.bnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/gtr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/intersects.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/ltr.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/max-satisfying.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/min-satisfying.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/min-version.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/outside.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/simplify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/subset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/to-comparators.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/node_modules/semver/ranges/valid.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,8 +213,8 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;git@github.com:LuoJunchao/TourLink_TravelPlatform.git&quot;,
-    &quot;accountId&quot;: &quot;956f4eb5-654b-4e64-8545-01dc3718747d&quot;
+    &quot;url&quot;: &quot;https://github.com/LuoJunchao/TourLink_TravelPlatform.git&quot;,
+    &quot;accountId&quot;: &quot;edee3a1c-1818-4110-9708-82a734744b54&quot;
   }
 }</component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -86,57 +238,70 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.social-service/Dockerfile.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Tourlink_TravelPlatform_Backend [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.Tourlink_TravelPlatform_Backend [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.routing-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.social-service [package].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AttractionServiceApplication (1).executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AttractionServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.DataPlatformServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.GatawayServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RoutingServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SocialServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;XJY&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/XJY/大三下/专业方向综合项目/TourLink_TravelPlatform&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend.routing-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署.executor": "Run",
+    "Docker.Tourlink_TravelPlatform_Backend: Compose 部署.executor": "Run",
+    "Docker.social-service/Dockerfile.executor": "Run",
+    "Maven.Tourlink_TravelPlatform_Backend [clean].executor": "Run",
+    "Maven.Tourlink_TravelPlatform_Backend [package].executor": "Run",
+    "Maven.attraction-service [clean].executor": "Run",
+    "Maven.attraction-service [package].executor": "Run",
+    "Maven.common-module [clean].executor": "Run",
+    "Maven.common-module [package].executor": "Run",
+    "Maven.data-platform-service [clean].executor": "Run",
+    "Maven.data-platform-service [package].executor": "Run",
+    "Maven.routing-service [package].executor": "Run",
+    "Maven.social-service [package].executor": "Run",
+    "Maven.user-service [package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.AttractionServiceApplication (1).executor": "Run",
+    "Spring Boot.AttractionServiceApplication.executor": "Run",
+    "Spring Boot.DataPlatformServiceApplication.executor": "Run",
+    "Spring Boot.GatawayServiceApplication.executor": "Run",
+    "Spring Boot.GatewayServiceApplication.executor": "Run",
+    "Spring Boot.RoutingServiceApplication.executor": "Run",
+    "Spring Boot.SocialServiceApplication.executor": "Run",
+    "Spring Boot.UserServiceApplication.executor": "Run",
+    "git-widget-placeholder": "XJY",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/XJY/大三下/专业方向综合项目/TourLink_TravelPlatform",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\XJY\IdeaProjects\TourLink_TravelPlatform\Tourlink_TravelPlatform_Backend\social-service" />
@@ -151,7 +316,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AttractionServiceApplication">
+  <component name="RunManager" selected="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -293,13 +458,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommonModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="common-module" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.common.CommonModuleApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataPlatformServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="data-platform-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.dataplatformservice.DataPlatformServiceApplication" />
@@ -335,38 +493,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="nacos" />
+              <option value="attraction-service" />
             </list>
           </option>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="social-service" />
+              <option value="data-platform-service" />
             </list>
           </option>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Tourlink_TravelPlatform_Backend.nacos: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="Tourlink_TravelPlatform_Backend.routing-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="nacos" />
+              <option value="routing-service" />
             </list>
           </option>
           <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
@@ -387,6 +545,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend.user-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="user-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -399,22 +570,13 @@
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="social-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/social-service/Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.routing-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
       <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
-      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" />
-      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" />
-      <item itemvalue="Docker.social-service/Dockerfile" />
       <item itemvalue="Spring Boot.AttractionServiceApplication" />
-      <item itemvalue="Spring Boot.CommonModuleApplication" />
       <item itemvalue="Spring Boot.DataPlatformServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
       <item itemvalue="Spring Boot.RoutingServiceApplication" />
@@ -423,11 +585,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
         <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
-        <item itemvalue="Docker.social-service/Dockerfile" />
-        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" />
-        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
-        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.routing-service: Compose 部署" />
       </list>
     </recent_temporary>
   </component>
@@ -477,6 +639,8 @@
       <workItem from="1747829308500" duration="3098000" />
       <workItem from="1747903879602" duration="328000" />
       <workItem from="1747904218202" duration="1761000" />
+      <workItem from="1748023821089" duration="1011000" />
+      <workItem from="1748024843499" duration="1947000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />
