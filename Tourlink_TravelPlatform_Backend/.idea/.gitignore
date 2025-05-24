@@ -6,3 +6,7 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+# 递归忽略所有子目录的 .iml 文件
+**/*.iml
+# 忽略所有 IDEA 配置
+.idea/
