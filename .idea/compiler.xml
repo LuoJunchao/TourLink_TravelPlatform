@@ -11,9 +11,9 @@
         <module name="gateway-service" />
         <module name="common-module" />
         <module name="social-service" />
-        <module name="attraction-service" />
         <module name="user-service" />
         <module name="data-platform-service" />
+        <module name="attractions-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -24,7 +24,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="attraction-service" options="" />
+      <module name="attractions-service" options="" />
       <module name="common-module" options="" />
       <module name="dataPlatform-service" options="" />
       <module name="gataway-service" options="" />
