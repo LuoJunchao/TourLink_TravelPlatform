@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/blogs")
+@RequestMapping("/api/social/blogs")
 public class BlogController {
 
     private final BlogService blogService;
