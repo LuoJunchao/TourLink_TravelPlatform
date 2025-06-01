@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="除gateway服务，所有服务已经能够运行并部署">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fff935b8-9214-49c0-8a54-879e07db07a0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fff935b8-9214-49c0-8a54-879e07db07a0/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fff935b8-9214-49c0-8a54-879e07db07a0/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fff935b8-9214-49c0-8a54-879e07db07a0/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fff935b8-9214-49c0-8a54-879e07db07a0/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="除gateway服务data platform服务，所有服务已经能够运行并部署">
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/ContentTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0661cd06-684d-4801-a21b-d9a69bf2e145.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0661cd06-684d-4801-a21b-d9a69bf2e145.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a445876c-ac00-4ba9-8bcf-9716b1c1a402.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a445876c-ac00-4ba9-8bcf-9716b1c1a402.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb550bac-2bb6-45b1-a0d4-bf6f05fd3c84.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/eb550bac-2bb6-45b1-a0d4-bf6f05fd3c84.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_21_21_04____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_22_15_39____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_23_21_30____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_21_21_04_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_22_15_39_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_23_21_30_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/java/org/tourlink/attractionservice/AttractionServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/java/org/tourlink/attractionservice/AttractionServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/DataPlatformServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/DataPlatformServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserBehaviorLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserBehaviorLog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/java/org/tourlink/gatewayservice/GatewayServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/java/org/tourlink/gatewayservice/GatewayServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/RoutingServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/RoutingServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/SocialServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/SocialServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/src/main/java/org/tourlink/userservice/UserServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/user-service/src/main/java/org/tourlink/userservice/UserServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,15 +49,15 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="XJY" />
+        <entry key="$PROJECT_DIR$" value="LJC1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -178,7 +180,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SocialServiceApplication">
+  <component name="RunManager" selected="Spring Boot.DataPlatformServiceApplication">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -433,11 +435,11 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
       <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" />
       <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" />
-      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
       <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
       <item itemvalue="Spring Boot.AttractionServiceApplication" />
       <item itemvalue="Spring Boot.DataPlatformServiceApplication" />
       <item itemvalue="Spring Boot.GatewayServiceApplication" />
@@ -509,6 +511,9 @@
       <workItem from="1748200409884" duration="2077000" />
       <workItem from="1748242959622" duration="520000" />
       <workItem from="1748243521650" duration="320000" />
+      <workItem from="1748625610226" duration="1722000" />
+      <workItem from="1748782956429" duration="3000" />
+      <workItem from="1748792264839" duration="639000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />

@@ -7,6 +7,9 @@ spring:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
+      config:
+        server-addr: 47.117.153.17:8848
+        file-extension: yml
   datasource:
     url: jdbc:mysql://47.117.153.17:3306/tl_social_service?useSSL=false&serverTimezone=UTC
     username: root

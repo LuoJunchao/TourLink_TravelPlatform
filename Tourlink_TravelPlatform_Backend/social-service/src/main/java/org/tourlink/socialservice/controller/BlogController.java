@@ -17,7 +17,7 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api/blogs")
+@RequestMapping("/api/social/blogs")
 public class BlogController {
 
     private final BlogService blogService;
@@ -26,6 +26,7 @@ public class BlogController {
     public String sayHello() {
         return "Hello from social-service!";
     }
+
     // 发布博客
     @PostMapping
     public ResponseEntity<BlogResponse> publishBlog(@RequestBody @Valid BlogRequest request) {
