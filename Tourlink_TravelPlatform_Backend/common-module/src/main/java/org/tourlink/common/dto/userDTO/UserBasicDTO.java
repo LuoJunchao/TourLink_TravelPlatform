@@ -1,4 +1,4 @@
-package org.tourlink.common.dto;
+package org.tourlink.common.dto.userDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,6 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserBasicDTO {
+
     private Long id;
     private String username;
     private String email;

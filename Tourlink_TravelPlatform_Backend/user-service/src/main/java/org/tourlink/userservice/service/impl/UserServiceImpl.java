@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.tourlink.common.dto.UserBasicDTO;
+import org.tourlink.common.dto.userDTO.UserBasicDTO;
 import org.tourlink.common.security.JwtPayload;
 import org.tourlink.common.security.JwtUtils;
 import org.tourlink.userservice.config.JwtConfig;

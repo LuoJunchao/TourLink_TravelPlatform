@@ -3,7 +3,7 @@ package org.tourlink.socialservice.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.tourlink.common.dto.AttractionTagsDTO;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 import org.tourlink.common.response.ApiResponse;
 import org.tourlink.socialservice.client.AttractionClient;
 import org.tourlink.socialservice.service.AttractionTagService;

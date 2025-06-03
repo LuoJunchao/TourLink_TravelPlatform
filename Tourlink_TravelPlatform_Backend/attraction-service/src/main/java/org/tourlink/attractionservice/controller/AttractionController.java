@@ -13,7 +13,7 @@ import org.tourlink.attractionservice.dto.AttractionResponse;
 import org.tourlink.attractionservice.dto.AttractionSummary;
 import org.tourlink.attractionservice.entity.Attraction;
 import org.tourlink.attractionservice.service.AttractionService;
-import org.tourlink.common.dto.AttractionTagsDTO;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 import org.tourlink.common.response.ApiResponse;
 
 import java.util.Arrays;

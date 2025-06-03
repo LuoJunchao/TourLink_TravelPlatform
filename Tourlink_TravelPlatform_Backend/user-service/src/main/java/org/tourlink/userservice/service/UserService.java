@@ -1,6 +1,6 @@
 package org.tourlink.userservice.service;
 
-import org.tourlink.common.dto.UserBasicDTO;
+import org.tourlink.common.dto.userDTO.UserBasicDTO;
 import org.tourlink.userservice.dto.AuthResponse;
 import org.tourlink.userservice.dto.LoginRequest;
 import org.tourlink.userservice.dto.RegisterRequest;

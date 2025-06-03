@@ -4,7 +4,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.tourlink.common.dto.AttractionTagsDTO;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 import org.tourlink.common.response.ApiResponse;
 
 import java.util.List;

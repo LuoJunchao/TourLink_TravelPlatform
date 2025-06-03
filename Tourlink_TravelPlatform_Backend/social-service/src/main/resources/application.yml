@@ -7,14 +7,17 @@ spring:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
-      config:
-        server-addr: 47.117.153.17:8848
-        file-extension: yml
   datasource:
     url: jdbc:mysql://47.117.153.17:3306/tl_social_service?useSSL=false&serverTimezone=UTC
     username: root
     password: TourLink@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
   jpa:
     show-sql: true
     properties:

@@ -1,4 +1,4 @@
-package org.tourlink.common.dto;
+package org.tourlink.common.dto.attractionDTO;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
