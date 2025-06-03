@@ -5,7 +5,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
-import org.tourlink.socialservice.dto.LikeResponse;
+import org.tourlink.common.dto.socialDTO.LikeResponse;
 import org.tourlink.socialservice.entity.Blog;
 import org.tourlink.socialservice.entity.BlogLike;
 import org.tourlink.socialservice.repository.BlogRepository;

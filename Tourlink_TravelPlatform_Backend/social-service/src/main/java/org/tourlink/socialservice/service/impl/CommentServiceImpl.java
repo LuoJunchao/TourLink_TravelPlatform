@@ -5,8 +5,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
-import org.tourlink.socialservice.dto.CommentRequest;
-import org.tourlink.socialservice.dto.CommentResponse;
+import org.tourlink.common.dto.socialDTO.CommentRequest;
+import org.tourlink.common.dto.socialDTO.CommentResponse;
+import org.tourlink.socialservice.converter.CommentConverter;
 import org.tourlink.socialservice.entity.Blog;
 import org.tourlink.socialservice.entity.BlogComment;
 import org.tourlink.socialservice.repository.BlogRepository;
@@ -50,7 +51,7 @@ public class CommentServiceImpl implements CommentService {
         blogRepository.incrementCommentCount(request.getBlogId());
 
         // 4. 返回 DTO
-        return CommentResponse.convertToResponse(blogComment);
+        return CommentConverter.toResponse(blogComment);
     }
 
     /**
@@ -79,7 +80,7 @@ public class CommentServiceImpl implements CommentService {
         Page<BlogComment> comments = commentRepository.findByBlog(blog, pageable);
 
         // 4. 将 Entity 分页对象转换为 DTO 分页对象
-        return comments.map(CommentResponse::convertToResponse);
+        return comments.map(CommentConverter::toResponse);
     }
 
     @Override

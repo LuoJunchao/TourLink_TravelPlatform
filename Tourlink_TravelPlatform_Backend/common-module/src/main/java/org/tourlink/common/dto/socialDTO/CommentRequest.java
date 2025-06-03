@@ -1,4 +1,4 @@
-package org.tourlink.socialservice.dto;
+package org.tourlink.common.dto.socialDTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

@@ -1087,7 +1087,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="296" parent="1" name="tl_data_platform_service">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-05-23.18:37:16</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-06-03.19:49:27</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="297" parent="1" name="root">
@@ -1173,7 +1173,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>3</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="315" parent="303" name="spot_preference">
+    <column id="315" parent="303" name="tag_weights">
       <Position>4</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
@@ -1181,31 +1181,27 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <Position>5</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="317" parent="303" name="top_weights">
+    <column id="317" parent="303" name="user_id">
+      <NotNull>1</NotNull>
       <Position>6</Position>
       <StoredType>varchar(255)|0s</StoredType>
     </column>
-    <column id="318" parent="303" name="user_id">
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-      <StoredType>varchar(255)|0s</StoredType>
-    </column>
-    <index id="319" parent="303" name="PRIMARY">
+    <index id="318" parent="303" name="PRIMARY">
       <ColNames>id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="320" parent="303" name="UK_ebc21hy5j7scdvcjt0jy6xxrv">
+    <index id="319" parent="303" name="UK_ebc21hy5j7scdvcjt0jy6xxrv">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="321" parent="303" name="PRIMARY">
+    <key id="320" parent="303" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <key id="322" parent="303" name="UK_ebc21hy5j7scdvcjt0jy6xxrv">
+    <key id="321" parent="303" name="UK_ebc21hy5j7scdvcjt0jy6xxrv">
       <UnderlyingIndexName>UK_ebc21hy5j7scdvcjt0jy6xxrv</UnderlyingIndexName>
     </key>
   </database-model>

@@ -1,6 +1,6 @@
 package org.tourlink.socialservice.service;
 
-import org.tourlink.socialservice.dto.LikeResponse;
+import org.tourlink.common.dto.socialDTO.LikeResponse;
 
 public interface LikeService {
     LikeResponse like(Long blogId, String userId);

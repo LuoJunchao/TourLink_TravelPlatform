@@ -47,6 +47,6 @@ public class UserBehaviorLog {
     }
 
     public enum BehaviorType {
-    VIEW, LIKE, COMMENT, COLLECT
+        VIEW, LIKE, COMMENT, COLLECT
     }
 }

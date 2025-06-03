@@ -40,16 +40,8 @@ public class UserProfile {
      * 示例：{"自然风光": 0.8, "文化遗产": 0.3}
      */
     @Convert(converter = StringDoubleMapJsonConverter.class)
-    @Column(name = "top_weights")
-    private Map<String, Double> topWeights;
-
-    /**
-     * 偏好的景点类型（按景点标签聚合）
-     * 示例：{"公园": 0.9, "城市建筑": 0.6}
-     */
-    @Convert(converter = StringDoubleMapJsonConverter.class)
-    @Column(name = "spot_preference")
-    private Map<String, Double> spotPreference;
+    @Column(name = "tag_weights")
+    private Map<String, Double> tagWeights;
 
     @UpdateTimestamp
     @Column(name = "last_updated")

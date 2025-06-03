@@ -1,23 +1,11 @@
-package org.tourlink.socialservice.dto;
+package org.tourlink.socialservice.converter;
 
-import lombok.Data;
+import org.tourlink.common.dto.socialDTO.CommentResponse;
 import org.tourlink.socialservice.entity.BlogComment;
 
-import java.time.LocalDateTime;
+public class CommentConverter {
 
-// 相应 DTO (返回给前端)
-@Data
-public class CommentResponse {
-
-    private Long commentId;
-
-    private String userId;
-
-    private String content;
-
-    private LocalDateTime commentTime;
-
-    public static CommentResponse convertToResponse(BlogComment blogComment) {
+    public static CommentResponse toResponse(BlogComment blogComment) {
         CommentResponse commentResponse = new CommentResponse();
 
         commentResponse.setCommentId(blogComment.getCommentId());

@@ -2,9 +2,9 @@ package org.tourlink.socialservice.controller;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.socialservice.dto.ChatPreview;
-import org.tourlink.socialservice.dto.MessageRequest;
-import org.tourlink.socialservice.dto.MessageResponse;
+import org.tourlink.common.dto.socialDTO.ChatPreview;
+import org.tourlink.common.dto.socialDTO.MessageRequest;
+import org.tourlink.common.dto.socialDTO.MessageResponse;
 
 import java.util.List;
 

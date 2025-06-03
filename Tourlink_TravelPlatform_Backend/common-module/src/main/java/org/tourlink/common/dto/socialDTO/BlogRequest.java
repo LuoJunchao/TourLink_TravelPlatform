@@ -1,4 +1,4 @@
-package org.tourlink.socialservice.dto;
+package org.tourlink.common.dto.socialDTO;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
@@ -25,5 +25,8 @@ public class BlogRequest {
 
     @Size(max = 5, message = "最多添加5个标签")
     private List<@NotBlank(message = "标签不能为空") String> tags;
+
+    @Size(max = 5, message = "最多关联5个景点")
+    private List<Long> attractionIds;
 
 }
