@@ -5,6 +5,7 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.*;
 import org.springframework.stereotype.Service;
+import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
 import org.tourlink.common.dto.socialDTO.CommentRequest;
 import org.tourlink.common.dto.socialDTO.CommentResponse;
 import org.tourlink.socialservice.converter.CommentConverter;
@@ -13,6 +14,7 @@ import org.tourlink.socialservice.entity.BlogComment;
 import org.tourlink.socialservice.repository.BlogRepository;
 import org.tourlink.socialservice.repository.CommentRepository;
 import org.tourlink.socialservice.service.CommentService;
+import org.tourlink.socialservice.service.event.BehaviorEventSender;
 
 import java.time.LocalDateTime;
 
@@ -22,6 +24,7 @@ public class CommentServiceImpl implements CommentService {
 
     private final BlogRepository blogRepository;
     private final CommentRepository commentRepository;
+    private final BehaviorEventSender behaviorEventSender;
 
     /**
      * 在一个 blog 下新增一条 comment
@@ -49,6 +52,16 @@ public class CommentServiceImpl implements CommentService {
 
         // 3. 更新博客的评论数
         blogRepository.incrementCommentCount(request.getBlogId());
+
+        // 发送行为消息
+        UserBehaviorMessage message = new UserBehaviorMessage(
+                userId,
+                "BLOG",
+                request.getBlogId(),
+                "COMMENT",
+                LocalDateTime.now()
+        );
+        behaviorEventSender.send(message);
 
         // 4. 返回 DTO
         return CommentConverter.toResponse(blogComment);

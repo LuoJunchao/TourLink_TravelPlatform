@@ -49,7 +49,7 @@ public class LikeServiceImpl implements LikeService {
         blogLike.setLikeTime(LocalDateTime.now());
         likeRepository.save(blogLike);
 
-        // 3. blog 点赞数 +1
+        // 3. blog 点赞数 + 1
         blogRepository.incrementLikeCount(blogId);
 
         // 4. 发送行为消息

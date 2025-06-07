@@ -12,7 +12,6 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.tourlink.socialservice.client.AttractionClient;
 import org.tourlink.common.dto.socialDTO.BlogRequest;
 import org.tourlink.common.dto.socialDTO.BlogResponse;
 import org.tourlink.common.dto.socialDTO.BlogSummary;
@@ -26,8 +25,7 @@ import java.util.*;
 
 import java.util.stream.Collectors;
 
-@Service
-@RequiredArgsConstructor
+@Service@RequiredArgsConstructor
 public class BlogServiceImpl implements BlogService {
 
     private static final String DEFAULT_SORT = "hot";
@@ -258,4 +256,5 @@ public class BlogServiceImpl implements BlogService {
                     Sort.Order.desc("hotScore");
         };
     }
+
 }

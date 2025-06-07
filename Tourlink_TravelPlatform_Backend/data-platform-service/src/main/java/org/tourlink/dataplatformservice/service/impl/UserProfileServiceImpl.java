@@ -40,17 +40,29 @@ public class UserProfileServiceImpl implements UserProfileService {
         UserProfile profile = userProfileRepository.findByUserId(behaviorLog.getUserId())
                 .orElseGet(() -> createNewProfile(behaviorLog.getUserId()));
 
-        // 3. 更新权重
-        Map<String, Double> updatedWeights = updateTagWeights(
-                profile.getTagWeights(),
-                tags,
-                behaviorLog.getBehaviorType(),
-                behaviorLog.getTimestamp()
-        );
+        // 3. 初始化两个 Map
+        Map<String, Double> weights = Optional.ofNullable(profile.getTagWeights()).orElseGet(HashMap::new);
+        Map<String, LocalDateTime> updateTimes = Optional.ofNullable(profile.getTagUpdateTimes()).orElseGet(HashMap::new);
 
-        // 4. 保存更新
-        profile.setTagWeights(updatedWeights);
+        double increment = UserProfileWeightUtil.calculateIncrement(behaviorLog.getBehaviorType(), tags.size());
+
+        for (String tag : tags) {
+            double oldWeight = weights.getOrDefault(tag, 0d);
+            LocalDateTime lastUpdate = updateTimes.get(tag);
+
+            // 衰减旧值
+            double decayed = UserProfileWeightUtil.applyTimeDecay(oldWeight, lastUpdate);
+
+            // 更新权重并刷新更新时间
+            double newWeight = UserProfileWeightUtil.mergeWeight(decayed, increment);
+            weights.put(tag, newWeight);
+            updateTimes.put(tag, behaviorLog.getTimestamp());
+        }
+
+        profile.setTagWeights(weights);
+        profile.setTagUpdateTimes(updateTimes);
         updateTopTags(profile);
+
         userProfileRepository.save(profile);
     }
 
@@ -58,29 +70,8 @@ public class UserProfileServiceImpl implements UserProfileService {
         UserProfile profile = new UserProfile();
         profile.setUserId(userId);
         profile.setTagWeights(new HashMap<>());
+        profile.setTagUpdateTimes(new HashMap<>());
         return profile;
-    }
-
-    private Map<String, Double> updateTagWeights(
-            Map<String, Double> currentWeights,
-            List<String> tags,
-            UserBehaviorLog.BehaviorType behaviorType,
-            LocalDateTime actionTime
-    ) {
-        Map<String, Double> weights = Optional.ofNullable(currentWeights)
-                .orElseGet(HashMap::new);
-
-        tags.forEach(tag -> {
-            double oldWeight = weights.getOrDefault(tag, 0.0);
-            double newWeight = UserProfileWeightUtil.updateTagWeights(
-                    oldWeight,
-                    behaviorType,
-                    actionTime,
-                    tags.size()
-            );
-            weights.put(tag, newWeight);
-        });
-        return weights;
     }
 
     private void updateTopTags(UserProfile profile) {

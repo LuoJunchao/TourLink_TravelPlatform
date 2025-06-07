@@ -23,9 +23,6 @@ public class BlogRequest {
     @Size(max = 9, message = "最多上传9张图片")
     private List<String> images;
 
-    @Size(max = 5, message = "最多添加5个标签")
-    private List<@NotBlank(message = "标签不能为空") String> tags;
-
     @Size(max = 5, message = "最多关联5个景点")
     private List<Long> attractionIds;
 
