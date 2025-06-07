@@ -3,6 +3,7 @@ package org.tourlink.dataplatformservice.service.impl;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.tourlink.common.dto.dataPlatformDTO.UserProfileDTO;
 import org.tourlink.dataplatformservice.entity.UserBehaviorLog;
 import org.tourlink.dataplatformservice.entity.UserProfile;
 import org.tourlink.dataplatformservice.repository.UserProfileRepository;
@@ -64,6 +65,19 @@ public class UserProfileServiceImpl implements UserProfileService {
         updateTopTags(profile);
 
         userProfileRepository.save(profile);
+    }
+
+    @Override
+    public UserProfileDTO getUserProfile(String userId) {
+        UserProfile userProfile = userProfileRepository.findByUserId(userId)
+                .orElseThrow(() -> new RuntimeException("用户不存在！"));
+
+        return UserProfileDTO.builder()
+                .userId(userProfile.getUserId())
+                .tagUpdateTimes(userProfile.getTagUpdateTimes())
+                .tagWeights(userProfile.getTagWeights())
+                .topTags(userProfile.getTopTags())
+                .build();
     }
 
     private UserProfile createNewProfile(String userId) {

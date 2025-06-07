@@ -7,6 +7,19 @@ spring:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 8000
+          attraction-service:
+            url: http://attraction-service:9080
+          data-platform-service:
+            url: http://data-platform-service:9081
+          social-service:
+            url: http://social-service:9084
+
   datasource:
     url: jdbc:mysql://47.117.153.17:3306/tl_routing_service?useSSL=false&serverTimezone=UTC
     username: root
