@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="初步完成数据中台和社交服务全部接口">
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/dataPlatformDTO/UserProfileDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/client/DataPlatformClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +41,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -513,7 +520,7 @@
       <workItem from="1749281868055" duration="5829000" />
       <workItem from="1749290924631" duration="6602000" />
       <workItem from="1749306409888" duration="2127000" />
-      <workItem from="1749315320120" duration="444000" />
+      <workItem from="1749315320120" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />
@@ -603,7 +610,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749307965575</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="初步完成数据中台和社交服务全部接口">
+      <option name="closed" value="true" />
+      <created>1749315884513</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749315884513</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
