@@ -6,7 +6,6 @@ import lombok.Data;
 import org.tourlink.common.converter.StringListJsonConverter;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -38,8 +37,10 @@ public class Blog {
     @Column(name = "attraction_ids", columnDefinition = "JSON")
     private List<Long> attractionIds;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<BlogTag> blogTags = new ArrayList<>();
+    // 缓存标签列表，存储博客关联景点的标签集合
+    @Convert(converter = StringListJsonConverter.class)
+    @Column(name = "cached_tags", columnDefinition = "JSON")
+    private List<String> cachedTags;
 
     @Column(name = "publish_time", nullable = false)
     private LocalDateTime publishTime;
@@ -58,13 +59,6 @@ public class Blog {
 
     @Column(name = "hot_score", columnDefinition = "DOUBLE DEFAULT 0")
     private Double hotScore = 0.0; // 推荐权重（博客热度）
-
-    // 添加标签
-    public void addTag(Tag tag) {
-        BlogTag blogTag = new BlogTag(this, tag);
-        blogTags.add(blogTag);
-        tag.getBlogTags().add(blogTag);
-    }
 
 }
 

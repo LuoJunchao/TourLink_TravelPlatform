@@ -17,14 +17,14 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.tourlink.common.dto.UserBasicDTO;
+import org.tourlink.common.dto.userDTO.UserBasicDTO;
 import org.tourlink.common.response.ApiResponse;
 
 import java.util.List;
 
 @FeignClient(name = "user-service")
 public interface UserClient {
-    
+
     /**
      * 获取用户基本信息
      * @param id 用户ID
@@ -32,7 +32,7 @@ public interface UserClient {
      */
     @GetMapping("/api/users/{id}/basic")
     ApiResponse<UserBasicDTO> getUserBasicInfo(@PathVariable("id") Long id);
-    
+
     /**
      * 批量获取多个用户的基本信息
      * @param ids 用户ID列表，以逗号分隔

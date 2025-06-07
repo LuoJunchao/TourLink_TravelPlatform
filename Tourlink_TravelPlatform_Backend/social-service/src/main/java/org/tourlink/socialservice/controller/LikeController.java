@@ -3,7 +3,7 @@ package org.tourlink.socialservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.socialservice.dto.LikeResponse;
+import org.tourlink.common.dto.socialDTO.LikeResponse;
 import org.tourlink.socialservice.service.LikeService;
 
 @RestController

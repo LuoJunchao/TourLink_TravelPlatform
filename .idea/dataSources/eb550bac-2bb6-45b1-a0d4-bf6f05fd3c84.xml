@@ -1076,19 +1076,19 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <schema id="292" parent="1" name="tl_attraction_service">
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
-    <schema id="293" parent="1" name="tl_data_platform_service">
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
-    </schema>
-    <schema id="294" parent="1" name="tl_routing_service">
+    <schema id="293" parent="1" name="tl_routing_service">
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
-    <schema id="295" parent="1" name="tl_social_service">
+    <schema id="294" parent="1" name="tl_social_service">
       <CollationName>utf8mb4_general_ci</CollationName>
     </schema>
-    <schema id="296" parent="1" name="tl_user_service">
+    <schema id="295" parent="1" name="tl_user_service">
       <Current>1</Current>
       <LastIntrospectionLocalTimestamp>2025-05-23.18:34:06</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
+    </schema>
+    <schema id="296" parent="1" name="tl_data_platform_service">
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </schema>
     <user id="297" parent="1" name="mysql.infoschema">
       <CanLogin>0</CanLogin>
@@ -1111,27 +1111,27 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     <user id="301" parent="1" name="root">
       <Host>localhost</Host>
     </user>
-    <table id="302" parent="296" name="user_blogs">
+    <table id="302" parent="295" name="user_blogs">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="303" parent="296" name="user_favorites">
+    <table id="303" parent="295" name="user_favorites">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="304" parent="296" name="user_profiles">
+    <table id="304" parent="295" name="user_profiles">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="305" parent="296" name="user_reviews">
+    <table id="305" parent="295" name="user_reviews">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="306" parent="296" name="user_roles">
+    <table id="306" parent="295" name="user_roles">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
-    <table id="307" parent="296" name="users">
+    <table id="307" parent="295" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>

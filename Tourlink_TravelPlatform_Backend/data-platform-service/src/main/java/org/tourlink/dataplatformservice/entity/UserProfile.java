@@ -6,6 +6,7 @@ import lombok.Data;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.tourlink.common.converter.StringListJsonConverter;
 import org.tourlink.common.converter.StringDoubleMapJsonConverter;
+import org.tourlink.common.converter.StringLocalDateTimeMapJsonConverter;
 
 
 import java.time.LocalDateTime;
@@ -40,16 +41,16 @@ public class UserProfile {
      * 示例：{"自然风光": 0.8, "文化遗产": 0.3}
      */
     @Convert(converter = StringDoubleMapJsonConverter.class)
-    @Column(name = "top_weights")
-    private Map<String, Double> topWeights;
+    @Column(name = "tag_weights")
+    private Map<String, Double> tagWeights;
 
     /**
-     * 偏好的景点类型（按景点标签聚合）
-     * 示例：{"公园": 0.9, "城市建筑": 0.6}
+     * 每个标签更新的最后时间
+     * 示例：{"自然风光": "2025-06-01T00:00:00", "文化遗产": "2025-06-05T12:34:56"}
      */
-    @Convert(converter = StringDoubleMapJsonConverter.class)
-    @Column(name = "spot_preference")
-    private Map<String, Double> spotPreference;
+    @Convert(converter = StringLocalDateTimeMapJsonConverter.class)
+    @Column(name = "tag_update_times")
+    private Map<String, LocalDateTime> tagUpdateTimes;
 
     @UpdateTimestamp
     @Column(name = "last_updated")

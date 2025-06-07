@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.common.dto.UserBasicDTO;
+import org.tourlink.common.dto.userDTO.UserBasicDTO;
 import org.tourlink.common.response.ApiResponse;
 import org.tourlink.userservice.dto.UserRequest;
 import org.tourlink.userservice.dto.UserResponse;
