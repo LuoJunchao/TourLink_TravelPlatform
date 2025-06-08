@@ -29,9 +29,34 @@
         <!-- Spring Boot 基础依赖 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
+<<<<<<< Updated upstream
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
             <optional>true</optional>
+=======
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- Jakarta Persistence -->
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>
+
+        <!-- Lombok 用于简化代码 -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.32</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- Jackson 序列化工具 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+>>>>>>> Stashed changes
         </dependency>
 
         <!-- 数据校验 -->
@@ -145,7 +170,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+<<<<<<< Updated upstream
                 <version>3.10.1</version>
+=======
+                <version>3.13.0</version>
+>>>>>>> Stashed changes
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
@@ -158,7 +187,10 @@
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
+<<<<<<< Updated upstream
             <!-- 不需要Spring Boot插件，因为这是一个库模块 -->
+=======
+>>>>>>> Stashed changes
         </plugins>
     </build>
 </project>

@@ -5,7 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.support.TransactionTemplate;
 import org.springframework.web.multipart.MultipartFile;
 import org.tourlink.attractionservice.dto.ImportResultDTO;
 import org.tourlink.attractionservice.entity.Attraction;
@@ -28,6 +29,7 @@ import java.util.*;
 public class ExcelImportServiceImpl implements ExcelImportService {
 
     private final AttractionRepository attractionRepository;
+    private final PlatformTransactionManager transactionManager;
 
     /**
      * 从Excel文件导入景点数据
@@ -35,7 +37,6 @@ public class ExcelImportServiceImpl implements ExcelImportService {
      * @return 导入结果
      */
     @Override
-    @Transactional
     public ImportResultDTO importAttractionsFromExcel(MultipartFile file) {
         ImportResultDTO result = ImportResultDTO.builder()
                 .totalCount(0)
@@ -83,8 +84,18 @@ public class ExcelImportServiceImpl implements ExcelImportService {
 
                 try {
                     Attraction attraction = parseAttractionFromRow(row, headerMap);
-                    attractionRepository.save(attraction);
-                    result.setSuccessCount(result.getSuccessCount() + 1);
+                    // 使用TransactionTemplate为每条记录创建独立事务
+                    TransactionTemplate transactionTemplate = new TransactionTemplate(transactionManager);
+                    transactionTemplate.execute(status -> {
+                        try {
+                            attractionRepository.save(attraction);
+                            result.setSuccessCount(result.getSuccessCount() + 1);
+                            return null;
+                        } catch (Exception e) {
+                            status.setRollbackOnly();
+                            throw e;
+                        }
+                    });
                 } catch (NumberFormatException e) {
                     // 数字格式错误
                     result.setFailCount(result.getFailCount() + 1);
