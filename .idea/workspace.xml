@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="初步完成数据中台和社交服务全部接口">
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/dataPlatformDTO/UserProfileDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/client/DataPlatformClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" afterDir="false" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="数据中台添加获取用户画像接口">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -520,7 +512,8 @@
       <workItem from="1749281868055" duration="5829000" />
       <workItem from="1749290924631" duration="6602000" />
       <workItem from="1749306409888" duration="2127000" />
-      <workItem from="1749315320120" duration="2934000" />
+      <workItem from="1749315320120" duration="3160000" />
+      <workItem from="1749435048819" duration="143000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />
@@ -618,7 +611,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749315884513</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="数据中台添加获取用户画像接口">
+      <option name="closed" value="true" />
+      <created>1749319600505</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1749319600505</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -634,6 +635,7 @@
     <MESSAGE value="添加了RabbitMQ用于实现用户行为异步信息队列收集" />
     <MESSAGE value="初步完成数据中台内容" />
     <MESSAGE value="初步完成数据中台和社交服务全部接口" />
-    <option name="LAST_COMMIT_MESSAGE" value="初步完成数据中台和社交服务全部接口" />
+    <MESSAGE value="数据中台添加获取用户画像接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="数据中台添加获取用户画像接口" />
   </component>
 </project>
