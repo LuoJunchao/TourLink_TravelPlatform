@@ -2,8 +2,6 @@ package org.tourlink.socialservice.service.impl;
 
 import io.micrometer.common.util.StringUtils;
 import jakarta.persistence.EntityNotFoundException;
-import jakarta.persistence.criteria.Join;
-import jakarta.persistence.criteria.JoinType;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -14,37 +12,30 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
-import org.tourlink.socialservice.dto.BlogRequest;
-import org.tourlink.socialservice.dto.BlogResponse;
-import org.tourlink.socialservice.dto.BlogSummary;
+import org.tourlink.common.dto.socialDTO.BlogRequest;
+import org.tourlink.common.dto.socialDTO.BlogResponse;
+import org.tourlink.common.dto.socialDTO.BlogSummary;
+import org.tourlink.socialservice.converter.BlogConverter;
 import org.tourlink.socialservice.entity.Blog;
-import org.tourlink.socialservice.entity.BlogTag;
-import org.tourlink.socialservice.entity.Tag;
 import org.tourlink.socialservice.repository.BlogRepository;
-import org.tourlink.socialservice.repository.TagRepository;
 import org.tourlink.socialservice.service.BlogService;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 import java.util.stream.Collectors;
 
-@Service
-@RequiredArgsConstructor
+@Service@RequiredArgsConstructor
 public class BlogServiceImpl implements BlogService {
 
     private static final String DEFAULT_SORT = "hot";
     private static final String DEFAULT_TIME_RANGE = "all";
-    private static final int MAX_TAG_LENGTH = 20;
 
     private final BlogRepository blogRepository;
-    private final TagRepository tagRepository;
+    private final AttractionClient attractionClient;
 
     /**
      * 发布博客
-     *
      * @param request 博客请求 DTO
      * @return 博客响应 DTO
      */
@@ -55,8 +46,8 @@ public class BlogServiceImpl implements BlogService {
         // 1. 新建博客并设置初始值
         Blog blog = new Blog();
         blog.setUserId(request.getUserId());
-        blog.setTitle(cleanContent(request.getTitle()));
-        blog.setContent(cleanContent(request.getContent()));
+        blog.setTitle(request.getTitle());
+        blog.setContent(request.getContent());
         blog.setImages(request.getImages() != null ? request.getImages() : new ArrayList<>());
         blog.setPublishTime(LocalDateTime.now());
         blog.setLikeCount(0);
@@ -67,17 +58,43 @@ public class BlogServiceImpl implements BlogService {
         // 2. 先保存博客（防止 TransientPropertyValueException）
         blogRepository.save(blog);
 
-        // 3. 处理标签
-        processBlogTags(blog, request.getTags());
+        // 3. 设置关联景点 ID （request 中包含）
+        if (request.getAttractionIds() != null && !request.getAttractionIds().isEmpty()) {
+            blog.setAttractionIds(request.getAttractionIds());
+        }
 
-        // 4. 返回 DTO
-        return BlogResponse.convertToResponse(blog);
+        // 4. 根据关联景点 ID 同步更新博客缓存标签
+        updateCachedTagsByAttractions(blog);
+
+        // 5. 保存更新后的博客
+        blogRepository.save(blog);
+
+        // 6. 返回 DTO
+        return BlogConverter.toResponse(blog);
 
     }
 
     /**
+     *根据博客的 attractionIds 调用景点服务接口，获取标签列表合并去重，更新博客 cachedTags 字段
+     * @param blog 待更新 cachedTags 的博客
+     */
+    private void updateCachedTagsByAttractions(Blog blog) {
+        if (blog.getAttractionIds() == null || blog.getAttractionIds().isEmpty()) {
+            return;
+        }
+
+        Set<String> tagSet = new HashSet<>();
+        for (Long attractionId : blog.getAttractionIds()) {
+            List<String> tags = attractionClient.getAttractionTags(attractionId).getData().getTags();
+            if (tags != null) {
+                tagSet.addAll(tags);
+            }
+        }
+        blog.setCachedTags(new ArrayList<>(tagSet));
+    }
+
+    /**
      * 获取博客详情
-     *
      * @param blogId 博客 ID
      * @return 博客响应 DTO
      */
@@ -90,13 +107,12 @@ public class BlogServiceImpl implements BlogService {
                 .orElseThrow(() -> new EntityNotFoundException("博客不存在:" + blogId));
 
         // 2. 返回 DTO
-        return BlogResponse.convertToResponse(blog);
+        return BlogConverter.toResponse(blog);
 
     }
 
     /**
      * 获取用户博客列表
-     *
      * @param userId 用户 ID
      * @return 博客摘要列表（按发布时间降序）
      */
@@ -114,13 +130,12 @@ public class BlogServiceImpl implements BlogService {
 
         // 3. 转换为 BlogSummary 列表
         return blogs.stream()
-                .map(BlogSummary::convertToSummary)
+                .map(BlogConverter::toSummary)
                 .collect(Collectors.toList());
     }
 
     /**
      * 搜索博客
-     *
      * @param keyword 关键词
      * @param searchType 搜索类型 (title/content/tag)
      * @param pageable 分页参数
@@ -138,7 +153,7 @@ public class BlogServiceImpl implements BlogService {
         Specification<Blog> spec = buildSearchSpecification(keyword, searchType);
 
         return blogRepository.findAll(spec, pageable)
-                .map(BlogSummary::convertToSummary);
+                .map(BlogConverter::toSummary);
 
     }
 
@@ -149,7 +164,6 @@ public class BlogServiceImpl implements BlogService {
 
     /**
      * 获取博客排行榜
-     *
      * @param sortBy 排序方式 (hot/view/like/comment/new)
      * @param timeRange 时间范围 (all/day/week/month/year)
      * @param pageable 分页参数
@@ -171,37 +185,7 @@ public class BlogServiceImpl implements BlogService {
 
         // 4. 执行查询
         return blogRepository.findAll(timeSpec, sortedPageable)
-                .map(BlogSummary::convertToSummary);
-    }
-
-    private void processBlogTags(Blog blog, List<String> tagNames) {
-        if (tagNames == null || tagNames.isEmpty()) {
-            return;
-        }
-
-        tagNames.stream()
-                .map(this::cleanTagName)
-                .forEach(tagName -> {
-                    Tag tag = tagRepository.findByName(tagName)
-                            .orElseGet(() -> tagRepository.save(new Tag(tagName)));
-                    blog.addTag(tag);
-                    tag.setUsageCount(tag.getUsageCount() + 1);
-                });
-    }
-
-    private String cleanTagName(String tagName) {
-        String cleaned = cleanContent(tagName);
-        if (cleaned.length() > MAX_TAG_LENGTH) {
-            return cleaned.substring(0, MAX_TAG_LENGTH);
-        }
-        return cleaned;
-    }
-
-    private String cleanContent(String content) {
-        if (content == null) {
-            return null;
-        }
-        return content.replace("<", "&lt;").replace(">", "&gt;");
+                .map(BlogConverter::toSummary);
     }
 
     private Specification<Blog> buildSearchSpecification(String keyword, String searchType) {
@@ -214,9 +198,7 @@ public class BlogServiceImpl implements BlogService {
                     predicates.add(criteriaBuilder.like(root.get("content"), "%" + keyword + "%"));
                     break;
                 case "tag":
-                    Join<Blog, BlogTag> blogTagJoin = root.join("blogTags", JoinType.INNER);
-                    Join<BlogTag, Tag> tagJoin = blogTagJoin.join("tag", JoinType.INNER);
-                    predicates.add(criteriaBuilder.like(tagJoin.get("name"), "%" + keyword + "%"));
+                    predicates.add(criteriaBuilder.like(root.get("cachedTags"), "%" + keyword + "%"));
                     break;
                 default: // title
                     predicates.add(criteriaBuilder.like(root.get("title"),pattern));
@@ -274,4 +256,5 @@ public class BlogServiceImpl implements BlogService {
                     Sort.Order.desc("hotScore");
         };
     }
+
 }

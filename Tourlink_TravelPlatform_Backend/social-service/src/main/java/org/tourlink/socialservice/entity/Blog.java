@@ -1,12 +1,11 @@
 package org.tourlink.socialservice.entity;
 
-import com.alibaba.nacos.shaded.com.google.gson.Gson;
-import com.alibaba.nacos.shaded.com.google.gson.reflect.TypeToken;
+
 import jakarta.persistence.*;
 import lombok.Data;
+import org.tourlink.common.converter.StringListJsonConverter;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Data
@@ -29,12 +28,19 @@ public class Blog {
     private String content;
 
     // 图片 URL 列表使用 @Convert 存储为 JSON 字符串
-    @Convert(converter = StringListConverter.class)
+    @Convert(converter = StringListJsonConverter.class)
     @Column(name = "images", columnDefinition = "JSON")
     private List<String> images;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<BlogTag> blogTags = new ArrayList<>();
+    // 关联的景点 ID 列表（存储为 JSON 数组）
+    @Convert(converter = StringListJsonConverter.class)
+    @Column(name = "attraction_ids", columnDefinition = "JSON")
+    private List<Long> attractionIds;
+
+    // 缓存标签列表，存储博客关联景点的标签集合
+    @Convert(converter = StringListJsonConverter.class)
+    @Column(name = "cached_tags", columnDefinition = "JSON")
+    private List<String> cachedTags;
 
     @Column(name = "publish_time", nullable = false)
     private LocalDateTime publishTime;
@@ -54,26 +60,5 @@ public class Blog {
     @Column(name = "hot_score", columnDefinition = "DOUBLE DEFAULT 0")
     private Double hotScore = 0.0; // 推荐权重（博客热度）
 
-    // 添加标签
-    public void addTag(Tag tag) {
-        BlogTag blogTag = new BlogTag(this, tag);
-        blogTags.add(blogTag);
-        tag.getBlogTags().add(blogTag);
-    }
-
 }
 
-// JSON 列表转换器
-@Converter
-class StringListConverter implements AttributeConverter<List<String>, String> {
-    @Override
-    public String convertToDatabaseColumn(List<String> list) {
-        return new Gson().toJson(list);
-    }
-
-    @Override
-    public List<String> convertToEntityAttribute(String json) {
-        return new Gson().fromJson(json, new TypeToken<List<String>>(){}.getType());
-    }
-
-}

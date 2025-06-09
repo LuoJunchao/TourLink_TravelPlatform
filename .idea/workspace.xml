@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="nacos已部署，对应配置文件已修改">
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="初步完成数据中台和社交服务全部接口">
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/dataPlatformDTO/UserProfileDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/java/org/tourlink/routingservice/client/DataPlatformClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.cache/.Apifox_Helper/.toolWindow.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/controller/DataPlatformController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/UserProfileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/service/impl/UserProfileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,15 +40,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Dockerfile" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="LJC1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -74,67 +80,90 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2vacLIdzCRI8hJfc6hLWTEFRAa9" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署.executor": "Run",
-    "Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署.executor": "Run",
-    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署.executor": "Run",
-    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署.executor": "Run",
-    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署.executor": "Run",
-    "Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署.executor": "Run",
-    "Docker.social-service/Dockerfile.executor": "Run",
-    "Maven.Tourlink_TravelPlatform_Backend [clean].executor": "Run",
-    "Maven.Tourlink_TravelPlatform_Backend [package].executor": "Run",
-    "Maven.routing-service [package].executor": "Run",
-    "Maven.social-service [package].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.AttractionServiceApplication (1).executor": "Run",
-    "Spring Boot.AttractionServiceApplication.executor": "Run",
-    "Spring Boot.DataPlatformServiceApplication.executor": "Run",
-    "Spring Boot.GatawayServiceApplication.executor": "Run",
-    "Spring Boot.RoutingServiceApplication.executor": "Run",
-    "Spring Boot.SocialServiceApplication.executor": "Run",
-    "Spring Boot.UserServiceApplication.executor": "Run",
-    "git-widget-placeholder": "XJY 上的 #2",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "17",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/XJY/大三下/专业方向综合项目/TourLink_TravelPlatform",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend.routing-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.mysql: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.routing-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.Tourlink_TravelPlatform_Backend: Compose 部署.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.social-service/Dockerfile.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Tourlink_TravelPlatform_Backend [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Tourlink_TravelPlatform_Backend [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attraction-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.attraction-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.common-module [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.common-module [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.common-module [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.data-platform-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.data-platform-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.routing-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.social-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.user-service [package].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AttractionServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AttractionServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DataPlatformServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatawayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.GatewayServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RoutingServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SocialServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.UserServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;XJY&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/XJY/大三下/信息安全/maotai_trace_backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\XJY\IdeaProjects\TourLink_TravelPlatform\Tourlink_TravelPlatform_Backend\social-service" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.tourlink.dataplatformservice.service.impl" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -146,7 +175,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署">
+  <component name="RunManager" selected="Spring Boot.SocialServiceApplication">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -288,13 +317,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommonModuleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="common-module" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.common.CommonModuleApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataPlatformServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="data-platform-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.tourlink.dataplatformservice.DataPlatformServiceApplication" />
@@ -330,28 +352,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="nacos" />
+              <option value="attraction-service" />
             </list>
           </option>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
     </configuration>
-    <configuration name="Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+    <configuration name="Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
           <option name="services">
             <list>
-              <option value="social-service" />
+              <option value="data-platform-service" />
             </list>
           </option>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.env.yml" />
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
         </settings>
       </deployment>
       <method v="2" />
@@ -382,6 +404,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="Tourlink_TravelPlatform_Backend.user-service: Compose 部署" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="user-service" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
@@ -389,32 +424,39 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
-      <method v="2" />
-    </configuration>
-    <configuration name="social-service/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
-        <settings>
-          <option name="sourceFilePath" value="Tourlink_TravelPlatform_Backend/social-service/Dockerfile" />
-        </settings>
+        <settings />
       </deployment>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
+      <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
+      <item itemvalue="Spring Boot.SocialServiceApplication" />
+      <item itemvalue="Spring Boot.AttractionServiceApplication" />
+      <item itemvalue="Spring Boot.DataPlatformServiceApplication" />
+      <item itemvalue="Spring Boot.GatewayServiceApplication" />
+      <item itemvalue="Spring Boot.RoutingServiceApplication" />
+      <item itemvalue="Spring Boot.UserServiceApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.social-service: Compose 部署" />
-        <item itemvalue="Docker.social-service/Dockerfile" />
-        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.nacos: Compose 部署" />
         <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.nacos: Compose 部署" />
-        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend/docker-compose.env.yml.social-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.data-platform-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.attraction-service: Compose 部署" />
+        <item itemvalue="Docker.Tourlink_TravelPlatform_Backend.user-service: Compose 部署" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26574.91" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26574.91" />
       </set>
     </attachedChunks>
   </component>
@@ -454,6 +496,31 @@
       <workItem from="1747819823290" duration="2173000" />
       <workItem from="1747822608346" duration="3542000" />
       <workItem from="1747829308500" duration="3098000" />
+      <workItem from="1747903879602" duration="328000" />
+      <workItem from="1747904218202" duration="1761000" />
+      <workItem from="1748023821089" duration="1011000" />
+      <workItem from="1748024843499" duration="2438000" />
+      <workItem from="1748155717414" duration="3289000" />
+      <workItem from="1748191563542" duration="1920000" />
+      <workItem from="1748199924059" duration="480000" />
+      <workItem from="1748200409884" duration="2077000" />
+      <workItem from="1748242959622" duration="520000" />
+      <workItem from="1748243521650" duration="320000" />
+      <workItem from="1748625610226" duration="1722000" />
+      <workItem from="1748782956429" duration="3000" />
+      <workItem from="1748792264839" duration="726000" />
+      <workItem from="1748795866823" duration="7784000" />
+      <workItem from="1748928668296" duration="324000" />
+      <workItem from="1748929033821" duration="1007000" />
+      <workItem from="1748957032838" duration="22438000" />
+      <workItem from="1749019612193" duration="1518000" />
+      <workItem from="1749035603937" duration="2687000" />
+      <workItem from="1749121308637" duration="2644000" />
+      <workItem from="1749201344632" duration="2686000" />
+      <workItem from="1749281868055" duration="5829000" />
+      <workItem from="1749290924631" duration="6602000" />
+      <workItem from="1749306409888" duration="2127000" />
+      <workItem from="1749315320120" duration="2934000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />
@@ -495,7 +562,63 @@
       <option name="project" value="LOCAL" />
       <updated>1747829507733</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5.14">
+      <option name="closed" value="true" />
+      <created>1747903187953</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747903187953</updated>
+    </task>
+    <task id="LOCAL-00007" summary="除gateway服务，所有服务已经能够运行并部署">
+      <option name="closed" value="true" />
+      <created>1748026980899</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1748026980899</updated>
+    </task>
+    <task id="LOCAL-00008" summary="6.1">
+      <option name="closed" value="true" />
+      <created>1748793080236</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1748793080236</updated>
+    </task>
+    <task id="LOCAL-00009" summary="添加了RabbitMQ用于实现用户行为异步信息队列收集">
+      <option name="closed" value="true" />
+      <created>1748928857831</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1748928857831</updated>
+    </task>
+    <task id="LOCAL-00010" summary="初步完成数据中台内容">
+      <option name="closed" value="true" />
+      <created>1748980535566</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1748980535566</updated>
+    </task>
+    <task id="LOCAL-00011" summary="初步完成数据中台和社交服务全部接口">
+      <option name="closed" value="true" />
+      <created>1749307965575</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1749307965575</updated>
+    </task>
+    <task id="LOCAL-00012" summary="初步完成数据中台和社交服务全部接口">
+      <option name="closed" value="true" />
+      <created>1749315884513</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1749315884513</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -505,6 +628,12 @@
     <MESSAGE value="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容" />
     <MESSAGE value="5.20" />
     <MESSAGE value="nacos已部署，对应配置文件已修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="nacos已部署，对应配置文件已修改" />
+    <MESSAGE value="5.14" />
+    <MESSAGE value="除gateway服务，所有服务已经能够运行并部署" />
+    <MESSAGE value="6.1" />
+    <MESSAGE value="添加了RabbitMQ用于实现用户行为异步信息队列收集" />
+    <MESSAGE value="初步完成数据中台内容" />
+    <MESSAGE value="初步完成数据中台和社交服务全部接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="初步完成数据中台和社交服务全部接口" />
   </component>
 </project>

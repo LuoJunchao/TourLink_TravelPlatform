@@ -1,11 +1,92 @@
 <component name="InspectionProjectProfileManager">
   <profile version="1.0">
     <option name="myName" value="Project Default" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="78" name="Java" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="ExtractMethodRecommender" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="minLength" value="673" />
+    </inspection_tool>
     <inspection_tool class="IncorrectHttpHeaderInspection" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="customHeaders">
         <set>
           <option value="userId" />
         </set>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="VulnerableLibrariesGlobal" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="VulnerableLibrariesLocal" enabled="false" level="WARNING" enabled_by_default="false">
+      <option name="isIgnoringEnabled" value="true" />
+      <option name="ignoredModules">
+        <list>
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+          <option value="social-service" />
+        </list>
+      </option>
+      <option name="ignoredPackages">
+        <list>
+          <option value="org.springframework:spring-web:6.0.2" />
+          <option value="org.springframework:spring-webflux:6.0.2" />
+          <option value="org.springframework:spring-webmvc:6.0.2" />
+          <option value="org.apache.tomcat.embed:tomcat-embed-core:10.1.1" />
+          <option value="com.jayway.jsonpath:json-path:2.7.0" />
+          <option value="net.minidev:json-smart:2.4.8" />
+          <option value="org.xmlunit:xmlunit-core:2.9.0" />
+          <option value="org.bouncycastle:bcprov-jdk15on:1.69" />
+          <option value="commons-fileupload:commons-fileupload:1.4" />
+          <option value="org.springframework.amqp:spring-amqp:3.0.0" />
+          <option value="com.rabbitmq:amqp-client:5.16.0" />
+          <option value="com.fasterxml.jackson.core:jackson-core:2.14.1" />
+          <option value="org.springframework.security:spring-security-crypto:6.0.0" />
+          <option value="org.springframework:spring-context:6.0.2" />
+          <option value="org.springframework.boot:spring-boot-autoconfigure:3.0.0" />
+          <option value="ch.qos.logback:logback-classic:1.4.5" />
+          <option value="ch.qos.logback:logback-core:1.4.5" />
+          <option value="org.yaml:snakeyaml:1.33" />
+          <option value="org.springframework:spring-expression:6.0.2" />
+        </list>
+      </option>
+      <option name="ignoredReasons">
+        <list>
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+          <option value="不可利用" />
+        </list>
       </option>
     </inspection_tool>
   </profile>
