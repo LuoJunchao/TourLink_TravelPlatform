@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import org.tourlink.common.dto.socialDTO.BlogRequest;
 import org.tourlink.common.dto.socialDTO.BlogResponse;
 import org.tourlink.common.dto.socialDTO.BlogSummary;
+import org.tourlink.socialservice.client.AttractionClient;
 import org.tourlink.socialservice.converter.BlogConverter;
 import org.tourlink.socialservice.entity.Blog;
 import org.tourlink.socialservice.repository.BlogRepository;
