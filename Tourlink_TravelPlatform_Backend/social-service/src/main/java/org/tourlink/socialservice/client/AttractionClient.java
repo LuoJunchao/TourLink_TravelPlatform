@@ -13,7 +13,7 @@ import java.util.List;
  * 景点服务Feign客户端
  * 用于调用社交服务的API
  */
-@FeignClient(name = "attraction-service", path = "/api/attractions")
+@FeignClient(name = "attraction-service", url = "http://localhost:9080", path = "/api/attractions")
 public interface AttractionClient {
 
     /**
@@ -21,7 +21,7 @@ public interface AttractionClient {
      * @param attractionId 景点ID
      * @return 景点标签信息
      */
-    @GetMapping("/{attractionId}")
+    @GetMapping("/tags/{attractionId}")
     ApiResponse<AttractionTagsDTO> getAttractionTags(@PathVariable("attractionId") Long attractionId);
 
     /**

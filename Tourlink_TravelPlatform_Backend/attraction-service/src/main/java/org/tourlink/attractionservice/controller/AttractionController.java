@@ -116,7 +116,7 @@ public class AttractionController {
         List<Long> idList = Arrays.stream(ids.split(","))
                 .map(String::trim)
                 .map(Long::parseLong)
-                .collect(Collectors.toList());
+                .toList();
 
         List<AttractionTagsDTO> tagsDTOList = idList.stream()
                 .map(id -> {

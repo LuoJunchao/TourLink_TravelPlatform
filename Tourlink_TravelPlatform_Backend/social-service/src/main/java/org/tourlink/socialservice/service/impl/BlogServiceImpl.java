@@ -5,6 +5,7 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.persistence.criteria.Predicate;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -12,9 +13,11 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 import org.tourlink.common.dto.socialDTO.BlogRequest;
 import org.tourlink.common.dto.socialDTO.BlogResponse;
 import org.tourlink.common.dto.socialDTO.BlogSummary;
+import org.tourlink.common.response.ApiResponse;
 import org.tourlink.socialservice.client.AttractionClient;
 import org.tourlink.socialservice.converter.BlogConverter;
 import org.tourlink.socialservice.entity.Blog;
@@ -26,6 +29,7 @@ import java.util.*;
 
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service@RequiredArgsConstructor
 public class BlogServiceImpl implements BlogService {
 
@@ -56,13 +60,14 @@ public class BlogServiceImpl implements BlogService {
         blog.setViewCount(0);
         blog.setHotScore(0.0);
 
-        // 2. 先保存博客（防止 TransientPropertyValueException）
-        blogRepository.save(blog);
 
-        // 3. 设置关联景点 ID （request 中包含）
+        // 2. 设置关联景点 ID （request 中包含）
         if (request.getAttractionIds() != null && !request.getAttractionIds().isEmpty()) {
             blog.setAttractionIds(request.getAttractionIds());
         }
+
+        // 3. 先保存博客（防止 TransientPropertyValueException）
+        blogRepository.save(blog);
 
         // 4. 根据关联景点 ID 同步更新博客缓存标签
         updateCachedTagsByAttractions(blog);
@@ -86,9 +91,11 @@ public class BlogServiceImpl implements BlogService {
 
         Set<String> tagSet = new HashSet<>();
         for (Long attractionId : blog.getAttractionIds()) {
-            List<String> tags = attractionClient.getAttractionTags(attractionId).getData().getTags();
-            if (tags != null) {
-                tagSet.addAll(tags);
+            log.info("Fetching tags for attraction: {}", attractionId);
+            ApiResponse<AttractionTagsDTO> response = attractionClient.getAttractionTags(attractionId);
+            log.info("Response: {}", response);
+            if (response != null && response.getData() != null) {
+                tagSet.addAll(response.getData().getTags());
             }
         }
         blog.setCachedTags(new ArrayList<>(tagSet));

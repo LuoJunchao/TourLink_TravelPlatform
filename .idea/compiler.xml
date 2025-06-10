@@ -11,6 +11,7 @@
         <module name="gateway-service" />
         <module name="common-module" />
         <module name="social-service" />
+        <module name="attraction-service" />
         <module name="user-service" />
         <module name="data-platform-service" />
         <module name="attractions-service" />
