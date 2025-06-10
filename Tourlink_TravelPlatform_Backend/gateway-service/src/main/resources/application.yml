@@ -1,16 +1,43 @@
+server:
+  port: 9082
 spring:
   application:
     name: gateway-service
   config:
     import: nacos:gateway-service-dev.yml
   cloud:
-    nacos:
-      discovery:
-        server-addr: 47.117.153.17:8848
-      config:
-        server-addr: 47.117.153.17:8848
-        file-extension: yml
     gateway:
+      routes:
+        - id: attraction-service
+          uri: http://47.117.153.17:9080
+          predicates:
+            - Path=/attraction/**
+          filters:
+            - StripPrefix=1
+        - id: data-platform-service
+          uri: http://47.117.153.17:9081
+          predicates:
+            - Path=/data-platform/**
+          filters:
+            - StripPrefix=1
+        - id: routing-service
+          uri: http://47.117.153.17:9083
+          predicates:
+            - Path=/routing/**
+          filters:
+            - StripPrefix=1
+        - id: social-service
+          uri: http://47.117.153.17:9084
+          predicates:
+            - Path=/social/**
+          filters:
+            - StripPrefix=1
+        - id: user-service
+          uri: http://47.117.153.17:9085
+          predicates:
+            - Path=/user/**
+          filters:
+            - StripPrefix=1
       discovery:
         locator:
           enabled: true  # 开启通过服务名自动转发

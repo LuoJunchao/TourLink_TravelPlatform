@@ -5,7 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="网关测试">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/00f89c21-832a-4c02-9d99-b3dad754b79d.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0661cd06-684d-4801-a21b-d9a69bf2e145.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a445876c-ac00-4ba9-8bcf-9716b1c1a402.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b91e689c-23e6-4a3d-a098-bc0c12e9fbbe.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/eb550bac-2bb6-45b1-a0d4-bf6f05fd3c84.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_21_21_04____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_22_15_39____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/_2025_5_23_21_30____.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_21_21_04_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_22_15_39_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/在进行更新之前于_2025_5_23_21_30_取消提交了更改_[更改]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/gateway-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/AttractionTagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/AttractionTagController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/BlogController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +91,7 @@
     "git-widget-placeholder": "正在变基 LJC1",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/luoju/Desktop/maotai-traceability-demo",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -386,7 +403,12 @@
       <workItem from="1748161479034" duration="167000" />
       <workItem from="1748175575887" duration="1912000" />
       <workItem from="1748179097684" duration="599000" />
-      <workItem from="1748245207275" duration="4426000" />
+      <workItem from="1748245207275" duration="5051000" />
+      <workItem from="1748626075228" duration="608000" />
+      <workItem from="1748685578335" duration="1797000" />
+      <workItem from="1748796725421" duration="621000" />
+      <workItem from="1748857155961" duration="2259000" />
+      <workItem from="1748957205707" duration="2128000" />
     </task>
     <task id="LOCAL-00001" summary="111">
       <option name="closed" value="true" />
@@ -660,7 +682,15 @@
       <option name="project" value="LOCAL" />
       <updated>1748256695521</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="网关测试">
+      <option name="closed" value="true" />
+      <created>1748265318832</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1748265318832</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

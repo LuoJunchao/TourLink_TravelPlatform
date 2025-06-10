@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * 用于测试从社交服务调用景点服务获取标签信息
  */
 @RestController
-@RequestMapping("/api/social/attraction-tags")
+@RequestMapping("/api/attraction-tags")
 @RequiredArgsConstructor
 public class AttractionTagController {
 
