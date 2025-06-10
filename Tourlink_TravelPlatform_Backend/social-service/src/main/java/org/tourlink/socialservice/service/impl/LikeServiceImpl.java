@@ -4,12 +4,14 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.tourlink.socialservice.dto.LikeResponse;
+import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
+import org.tourlink.common.dto.socialDTO.LikeResponse;
 import org.tourlink.socialservice.entity.Blog;
 import org.tourlink.socialservice.entity.BlogLike;
 import org.tourlink.socialservice.repository.BlogRepository;
 import org.tourlink.socialservice.repository.LikeRepository;
 import org.tourlink.socialservice.service.LikeService;
+import org.tourlink.socialservice.service.event.BehaviorEventSender;
 
 import java.time.LocalDateTime;
 
@@ -20,6 +22,7 @@ public class LikeServiceImpl implements LikeService {
 
     private final BlogRepository blogRepository;
     private final LikeRepository likeRepository;
+    private final BehaviorEventSender behaviorEventSender;
 
     /**
      * 用户为一个 blog 点赞
@@ -46,10 +49,20 @@ public class LikeServiceImpl implements LikeService {
         blogLike.setLikeTime(LocalDateTime.now());
         likeRepository.save(blogLike);
 
-        // 3. blog 点赞数 +1
+        // 3. blog 点赞数 + 1
         blogRepository.incrementLikeCount(blogId);
 
-        // 4. 封装为 LikeResponse 返回信息
+        // 4. 发送行为消息
+        UserBehaviorMessage message = new UserBehaviorMessage(
+                userId,
+                "BLOG",
+                blogId,
+                "LIKE",
+                LocalDateTime.now()
+        );
+        behaviorEventSender.send(message);
+
+        // 5. 封装为 LikeResponse 返回信息
         return LikeResponse.builder()
                 .blogId(blogId)
                 .userId(userId)

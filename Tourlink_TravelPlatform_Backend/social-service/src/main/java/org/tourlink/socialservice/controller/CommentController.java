@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.socialservice.dto.CommentRequest;
-import org.tourlink.socialservice.dto.CommentResponse;
+import org.tourlink.common.dto.socialDTO.CommentRequest;
+import org.tourlink.common.dto.socialDTO.CommentResponse;
 import org.tourlink.socialservice.service.CommentService;
 
 @RestController

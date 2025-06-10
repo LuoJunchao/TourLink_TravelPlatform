@@ -7,11 +7,27 @@ spring:
     nacos:
       discovery:
         server-addr: 47.117.153.17:8848
+    openfeign:
+      client:
+        config:
+          default:
+            connect-timeout: 5000
+            read-timeout: 8000
+          attraction-service:
+            url: http://attraction-service:9080
+          social-service:
+            url: http://social-service:9084
   datasource:
     url: jdbc:mysql://47.117.153.17:3306/tl_data_platform_service?useSSL=false&serverTimezone=UTC
     username: root
     password: TourLink@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
   jpa:
     show-sql: true
     properties:

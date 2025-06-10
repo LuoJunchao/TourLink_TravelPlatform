@@ -8,9 +8,11 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.socialservice.dto.BlogRequest;
-import org.tourlink.socialservice.dto.BlogResponse;
-import org.tourlink.socialservice.dto.BlogSummary;
+import org.tourlink.common.dto.socialDTO.BlogRequest;
+import org.tourlink.common.dto.socialDTO.BlogResponse;
+import org.tourlink.common.dto.socialDTO.BlogSummary;
+import org.tourlink.socialservice.entity.Blog;
+import org.tourlink.socialservice.repository.BlogRepository;
 import org.tourlink.socialservice.service.BlogService;
 
 import java.util.List;
@@ -21,11 +23,13 @@ import java.util.List;
 public class BlogController {
 
     private final BlogService blogService;
+    private final BlogRepository blogRepository;
 
     @GetMapping("/hello")
     public String sayHello() {
         return "Hello from social-service!";
     }
+
     // 发布博客
     @PostMapping
     public ResponseEntity<BlogResponse> publishBlog(@RequestBody @Valid BlogRequest request) {
@@ -70,6 +74,14 @@ public class BlogController {
             @RequestParam(defaultValue = "all") String timeRange,
             @PageableDefault() Pageable pageable) {
         return ResponseEntity.ok(blogService.getBlogRanking(sortBy, timeRange, pageable));
+    }
+
+    // 根据博客ID返回标签列表
+    @GetMapping("/{blogId}/tags")
+    public List<String> getBlogTags(@PathVariable Long blogId) {
+        return blogRepository.findById(blogId)
+                .map(Blog::getCachedTags)
+                .orElseThrow(() -> new RuntimeException("Blog not found"));
     }
 
 }

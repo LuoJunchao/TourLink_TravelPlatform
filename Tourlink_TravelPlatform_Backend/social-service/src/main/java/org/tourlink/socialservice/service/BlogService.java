@@ -2,9 +2,9 @@ package org.tourlink.socialservice.service;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.tourlink.socialservice.dto.BlogRequest;
-import org.tourlink.socialservice.dto.BlogResponse;
-import org.tourlink.socialservice.dto.BlogSummary;
+import org.tourlink.common.dto.socialDTO.BlogRequest;
+import org.tourlink.common.dto.socialDTO.BlogResponse;
+import org.tourlink.common.dto.socialDTO.BlogSummary;
 
 import java.util.List;
 
