@@ -31,6 +31,11 @@ public interface BlogRepository extends CrudRepository<Blog, Long> {
     @Query("UPDATE Blog b SET b.commentCount = b.commentCount + 1 WHERE b.blogId = :blogId")
     void incrementCommentCount(@Param("blogId") Long blogId);
 
+    @Modifying
+    @Transactional
+    @Query("UPDATE Blog b SET b.viewCount = b.viewCount + 1 WHERE b.blogId = :blogId")
+    void incrementViewCount(@Param("blogId") Long blogId);
+
     List<Blog> findByUserIdOrderByPublishTime(String userId);
 
     Page<Blog> findAll(Specification<Blog> spec, Pageable pageable);

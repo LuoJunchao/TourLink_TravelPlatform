@@ -1,0 +1,42 @@
+package org.tourlink.common.converter;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
+
+import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.Map;
+
+@Converter
+public class StringLocalDateTimeMapJsonConverter implements AttributeConverter<Map<String, LocalDateTime>, String> {
+
+    private static final ObjectMapper objectMapper = new ObjectMapper();
+
+    @Override
+    public String convertToDatabaseColumn(Map<String, LocalDateTime> attribute) {
+        if (attribute == null || attribute.isEmpty()) {
+            return "{}";
+        }
+        try {
+            return objectMapper.writeValueAsString(attribute);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    @Override
+    public Map<String, LocalDateTime> convertToEntityAttribute(String dbData) {
+        if (dbData == null || dbData.isEmpty()) {
+            return new HashMap<>();
+        }
+        try {
+            return objectMapper.readValue(dbData, new TypeReference<>() {
+            });
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+}
