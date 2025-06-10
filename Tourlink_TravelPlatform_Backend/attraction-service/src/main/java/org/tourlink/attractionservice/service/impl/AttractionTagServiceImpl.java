@@ -3,12 +3,13 @@ package org.tourlink.attractionservice.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-
+import org.tourlink.attractionservice.repository.AttractionRepository;
+import org.tourlink.attractionservice.entity.Attraction;
 import org.tourlink.attractionservice.service.AttractionTagService;
 import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 
-import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * 景点标签服务实现类
@@ -17,18 +18,31 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class AttractionTagServiceImpl implements AttractionTagService {
-
-    // TODO: 注入相关的Repository
+    
+    private final AttractionRepository attractionRepository;
     
     @Override
     public AttractionTagsDTO getAttractionTags(Long attractionId) {
-        // TODO: 实现获取单个景点标签的逻辑
-        return new AttractionTagsDTO(attractionId, null, Collections.emptyList());
+        Attraction attraction = attractionRepository.findById(attractionId)
+                .orElseThrow(() -> new RuntimeException("景点不存在，ID: " + attractionId));
+        
+        return new AttractionTagsDTO(
+                attraction.getAttractionId(),
+                attraction.getName(),
+                attraction.getTags()
+        );
     }
-
+    
     @Override
     public List<AttractionTagsDTO> getBatchAttractionTags(List<Long> attractionIds) {
-        // TODO: 实现批量获取景点标签的逻辑
-        return Collections.emptyList();
+        List<Attraction> attractions = attractionRepository.findAllById(attractionIds);
+        
+        return attractions.stream()
+                .map(attraction -> new AttractionTagsDTO(
+                        attraction.getAttractionId(),
+                        attraction.getName(),
+                        attraction.getTags()
+                ))
+                .collect(Collectors.toList());
     }
 }
