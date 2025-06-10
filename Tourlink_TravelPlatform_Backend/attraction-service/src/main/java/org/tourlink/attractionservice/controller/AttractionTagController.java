@@ -3,7 +3,8 @@ package org.tourlink.attractionservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.tourlink.common.dto.AttractionTagsDTO;
+
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 import org.tourlink.common.response.ApiResponse;
 import org.tourlink.attractionservice.service.AttractionTagService;
 

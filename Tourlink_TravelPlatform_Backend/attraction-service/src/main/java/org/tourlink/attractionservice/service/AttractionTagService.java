@@ -1,6 +1,6 @@
 package org.tourlink.attractionservice.service;
 
-import org.tourlink.common.dto.AttractionTagsDTO;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 
 import java.util.List;
 

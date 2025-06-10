@@ -3,8 +3,9 @@ package org.tourlink.attractionservice.service.impl;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
-import org.tourlink.common.dto.AttractionTagsDTO;
+
 import org.tourlink.attractionservice.service.AttractionTagService;
+import org.tourlink.common.dto.attractionDTO.AttractionTagsDTO;
 
 import java.util.Collections;
 import java.util.List;
