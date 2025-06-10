@@ -1,4 +1,4 @@
-package org.tourlink.socialservice.config;
+package org.tourlink.attractionservice.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
