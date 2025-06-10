@@ -9,14 +9,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="routing-service" />
         <module name="gateway-service" />
-        <module name="common-module" />
         <module name="social-service" />
+        <module name="attraction-service" />
         <module name="user-service" />
         <module name="data-platform-service" />
         <module name="attractions-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="common-module" target="17" />
       <module name="dataPlatform-service" target="17" />
       <module name="gataway-service" target="17" />
       <module name="spring-cloud-alibaba" target="17" />
