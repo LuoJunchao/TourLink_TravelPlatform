@@ -3,8 +3,6 @@ server:
 spring:
   application:
     name: gateway-service
-  config:
-    import: nacos:gateway-service-dev.yml
   cloud:
     gateway:
       globalcors:
@@ -17,9 +15,6 @@ spring:
               - PUT
               - DELETE
               - OPTIONS
-            allowedHeaders: "*"
-            allowCredentials: true
-            maxAge: 3600
       routes:
         - id: attraction-service
           uri: http://47.117.153.17:9080

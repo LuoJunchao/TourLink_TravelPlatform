@@ -1,5 +1,6 @@
 package org.tourlink.routingservice.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.tourlink.routingservice.dto.PathPlanRequest;
 import org.tourlink.routingservice.dto.PathPlanResponse;
@@ -24,10 +25,11 @@ public class PathPlanningServiceImpl implements PathPlanningService {
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return R * c;
     }
-
+    @Autowired
+    private SpotRepository spotRepository;
     @Override
     public PathPlanResponse planRoute(PathPlanRequest request) {
-        List<Spot> allSpots = SpotRepository.findAll();
+        List<Spot> allSpots = spotRepository.findAll();
 
         // 归一化偏好
         UserPreference pref = normalizePreference(request.getUserPreference());
