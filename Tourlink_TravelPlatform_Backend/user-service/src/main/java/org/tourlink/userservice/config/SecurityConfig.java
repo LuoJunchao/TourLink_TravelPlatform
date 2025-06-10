@@ -19,7 +19,7 @@ public class SecurityConfig {
             .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
             .authorizeHttpRequests(auth -> auth
                 .requestMatchers(SecurityConstants.LOGIN_ENDPOINT, SecurityConstants.REGISTER_ENDPOINT).permitAll()
-                .requestMatchers("/api/users/batch/basic", "/api/users/*/basic").permitAll()
+                .requestMatchers("/api/users/batch/basic","/api/users/auth", "/api/users/*/basic").permitAll()
                 .anyRequest().authenticated()
             );
         
