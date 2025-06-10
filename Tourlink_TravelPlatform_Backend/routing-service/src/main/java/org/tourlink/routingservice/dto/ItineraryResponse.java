@@ -10,7 +10,6 @@ public class ItineraryResponse {
 
     private Long itineraryId;
     private List<NodeResponse> nodes;
-    private List<EdgeResponse> edges;
     private Integer totalTimeCost;
     private BigDecimal totalMoneyCost;
 
