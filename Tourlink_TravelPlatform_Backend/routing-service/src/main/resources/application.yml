@@ -3,6 +3,7 @@ server:
 spring:
   application:
     name: routing-service
+  cloud:
     openfeign:
       client:
         config:
