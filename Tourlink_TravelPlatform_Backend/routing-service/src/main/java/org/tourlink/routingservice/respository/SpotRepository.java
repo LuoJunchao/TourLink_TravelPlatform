@@ -1,5 +1,8 @@
 package org.tourlink.routingservice.respository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 import org.tourlink.routingservice.entity.Spot;
 
@@ -9,16 +12,5 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-public class SpotRepository {
-    private static final Map<Long, Spot> spotStore = new ConcurrentHashMap<>();
-
-    public void saveAll(List<Spot> spots) {
-        for (Spot spot : spots) {
-            spotStore.put(spot.getId(), spot);
-        }
-    }
-
-    public static List<Spot> findAll() {
-        return new ArrayList<>(spotStore.values());
-    }
+public interface SpotRepository extends JpaRepository<Spot, Long> {
 }
