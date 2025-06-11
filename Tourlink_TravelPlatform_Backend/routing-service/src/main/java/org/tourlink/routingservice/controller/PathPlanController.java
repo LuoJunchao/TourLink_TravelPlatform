@@ -23,6 +23,10 @@ public class PathPlanController {
     @Autowired
     private DataPlatformClient dataPlatformClient;
 
+    @GetMapping("/status")
+    public String checkApiStatus() {
+        return "API is working! Status: OK";
+    }
     @PostMapping("/plan")
     public ResponseEntity<PathPlanResponse> planRoute(@RequestBody PathPlanRequest request) {
 

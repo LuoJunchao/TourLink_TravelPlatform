@@ -3,10 +3,7 @@ package org.tourlink.userservice.controller;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.tourlink.common.response.ApiResponse;
 import org.tourlink.common.security.SecurityConstants;
 import org.tourlink.userservice.dto.AuthResponse;
@@ -24,12 +21,16 @@ public class AuthController {
     
     @Autowired
     private UserService userService;
-    
+    @GetMapping("/status")
+    public String checkApiStatus() {
+        return "API is working! Status: OK";
+    }
     /**
      * 用户注册
      * @param registerRequest 注册请求
      * @return 认证响应
      */
+
     @PostMapping("/register")
     public ResponseEntity<ApiResponse<AuthResponse>> register(@Valid @RequestBody RegisterRequest registerRequest) {
         AuthResponse authResponse = userService.register(registerRequest);
