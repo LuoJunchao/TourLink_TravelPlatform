@@ -1075,7 +1075,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </schema>
     <schema id="292" parent="1" name="tl_attraction_service">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-06-09.16:05:58</LastIntrospectionLocalTimestamp>
+      <LastIntrospectionLocalTimestamp>2025-06-11.14:20:06</LastIntrospectionLocalTimestamp>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="293" parent="1" name="tl_data_platform_service">
@@ -1140,7 +1140,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
       <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <column id="309" parent="302" name="attraction_id">
-      <AutoIncrement>9770</AutoIncrement>
+      <AutoIncrement>2443</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>bigint|0s</StoredType>

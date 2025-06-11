@@ -16,12 +16,16 @@ spring:
             url: http://data-platform-service:9081
           social-service:
             url: http://social-service:9084
-
   datasource:
     url: jdbc:mysql://47.117.153.17:3306/tl_routing_service?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: TourLink@2025
     driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: 20
+      idle-timeout: 30000          # 空闲连接最大存活时间
+      max-lifetime: 600000         # 连接最大生命周期
+      connection-timeout: 30000    # 获取连接的超时时间
   jpa:
     show-sql: true
     properties:
