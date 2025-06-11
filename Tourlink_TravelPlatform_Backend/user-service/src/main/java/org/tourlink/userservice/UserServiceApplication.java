@@ -12,7 +12,7 @@ import org.tourlink.common.config.WebMvcConfig;
 @EnableJpaRepositories(basePackages = "org.tourlink.userservice.repository")
 @EnableFeignClients
 @EnableDiscoveryClient
-@Import(WebMvcConfig.class)
+
 public class UserServiceApplication {
 
     public static void main(String[] args) {
