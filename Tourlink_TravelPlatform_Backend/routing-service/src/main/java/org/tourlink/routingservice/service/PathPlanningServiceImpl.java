@@ -6,41 +6,96 @@ import org.tourlink.routingservice.dto.PathPlanRequest;
 import org.tourlink.routingservice.dto.PathPlanResponse;
 import org.tourlink.routingservice.entity.*;
 import org.tourlink.routingservice.respository.SpotRepository;
+import org.tourlink.routingservice.respository.TransportStationRepository;
 import org.tourlink.routingservice.utils.GeoUtils;
 
 import java.util.*;
 
 @Service
 public class PathPlanningServiceImpl implements PathPlanningService {
+    @Autowired
+    private TransportStationRepository stationRepository;
 
-    private double haversine(double lat1, double lon1, double lat2, double lon2) {
-        final int R = 6371; // 地球半径，单位：公里
-        double latDistance = Math.toRadians(lat2 - lat1);
-        double lonDistance = Math.toRadians(lon2 - lon1);
-
-        double a = Math.sin(latDistance / 2) * Math.sin(latDistance / 2)
-                + Math.cos(Math.toRadians(lat1)) * Math.cos(Math.toRadians(lat2))
-                * Math.sin(lonDistance / 2) * Math.sin(lonDistance / 2);
-
-        double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        return R * c;
-    }
     @Autowired
     private SpotRepository spotRepository;
+
     @Override
     public PathPlanResponse planRoute(PathPlanRequest request) {
         List<Spot> allSpots = spotRepository.findAll();
+        String transportMode = request.getTransportMode();
+
+        // 调用遗传算法核心逻辑（假设已封装）
+        PathPlanResponse response = new PathPlanResponse();
+
+        // 判断交通方式是否需要自动选择
+        if ((!"TRAIN".equalsIgnoreCase(transportMode) && !"AIRPORT".equalsIgnoreCase(transportMode))) {
+            List<TransportStation> originAirports = stationRepository.findByCityNameAndType(request.getFromCity(), "AIRPORT");
+            List<TransportStation> originTrains = stationRepository.findByCityNameAndType(request.getFromCity(), "TRAIN");
+
+            List<TransportStation> destAirports = stationRepository.findByCityNameAndType(request.getToCity(), "AIRPORT");
+            List<TransportStation> destTrains = stationRepository.findByCityNameAndType(request.getToCity(), "TRAIN");
+
+            double minFlightDistance = Double.MAX_VALUE;
+            double minTrainDistance = Double.MAX_VALUE;
+            TransportStation bestFromAirport = null, bestToAirport = null;
+            TransportStation bestFromTrain = null, bestToTrain = null;
+
+            for (TransportStation o : originAirports) {
+                for (TransportStation d : destAirports) {
+                    double dist = GeoUtils.calculateDistance(o.getLatitude(), o.getLongitude(), d.getLatitude(), d.getLongitude());
+                    if (dist < minFlightDistance) {
+                        minFlightDistance = dist;
+                        bestFromAirport = o;
+                        bestToAirport = d;
+                    }
+                }
+            }
+
+            for (TransportStation o : originTrains) {
+                for (TransportStation d : destTrains) {
+                    double dist = GeoUtils.calculateDistance(o.getLatitude(), o.getLongitude(), d.getLatitude(), d.getLongitude());
+                    if (dist < minTrainDistance) {
+                        minTrainDistance = dist;
+                        bestFromTrain = o;
+                        bestToTrain = d;
+                    }
+                }
+            }
+
+            // 选择最终的交通方式
+            double chosenDistance;
+            TransportStation originStation;
+            TransportStation destStation;
+
+            if (minTrainDistance <= 1000 || minFlightDistance == Double.MAX_VALUE) {
+                transportMode = "TRAIN";
+                chosenDistance = minTrainDistance;
+                originStation = bestFromTrain;
+                destStation = bestToTrain;
+            } else {
+                transportMode = "AIRPORT";
+                chosenDistance = minFlightDistance;
+                originStation = bestFromAirport;
+                destStation = bestToAirport;
+            }
+
+            double estimatedPrice = GeoUtils.estimatePrice(chosenDistance, transportMode);
+            System.out.println("推荐交通方式: " + transportMode + "，预计距离: " + chosenDistance + " km，估算价格: ¥" + estimatedPrice);
+
+            // 构造估计对象
+            if (originStation != null && destStation != null) {
+                TransportEstimate estimate = new TransportEstimate();
+                estimate.setFromStation(originStation.getName());
+                estimate.setToStation(destStation.getName());
+                estimate.setTransportType(transportMode);
+                estimate.setEstimatedDistance(chosenDistance);
+                estimate.setEstimatedPrice(estimatedPrice);
+                response.setTransportEstimate(estimate);
+            }
+        }
 
         // 归一化偏好
         UserPreference pref = normalizePreference(request.getUserPreference());
-//        TransportStation originStation = ...;
-//        TransportStation destStation = ...;
-//        // 计算距离
-//        double distance = haversine(originStation.getLatitude(), originStation.getLongitude(),
-//                destStation.getLatitude(), destStation.getLongitude());
-//
-//        // 估算价格
-//        double transportPrice = GeoUtils.estimatePrice(distance, originStation.getType());
         // 初始化种群
         List<List<Spot>> population = initPopulation(allSpots);
         List<Spot> best = null;
@@ -75,11 +130,11 @@ public class PathPlanningServiceImpl implements PathPlanningService {
             best = population.get(0); // 或随机一条
         }
         List<PlannedRoute> routes = decode(best);
-        PathPlanResponse response = new PathPlanResponse();
         response.setDailyRoutes(routes);
 //        response.setEstimatedTransportPrice(transportPrice);
         return response;
     }
+
 
     private UserPreference normalizePreference(UserPreference pref) {
         Map<String, Double> norm = new HashMap<>();
@@ -128,6 +183,7 @@ public class PathPlanningServiceImpl implements PathPlanningService {
         Collections.swap(list, i, j);
     }
 
+
     private double fitness(List<Spot> sequence, UserPreference pref) {
         List<PlannedRoute> plan = decode(sequence);
         double score = 0;
@@ -174,7 +230,6 @@ public class PathPlanningServiceImpl implements PathPlanningService {
     private List<PlannedRoute> decode(List<Spot> route) {
         // 显式指定每天最多容纳的时间段（上午100、下午010、晚上001 => 3 bit）
         final int MAX_DAYS = 3; // 可按需扩展
-        int skippedSpotsCount = 0;
 
         // 每天的景点列表
         List<List<Spot>> dailySpots = splitIntoDays(route, MAX_DAYS); // 拆分为每天的子列表
@@ -226,7 +281,6 @@ public class PathPlanningServiceImpl implements PathPlanningService {
                     }
                 }
                 if (!assigned) {
-                    skippedSpotsCount++;
                     System.out.println("未能安排景点：" + spot.getName() + "（时间段冲突）");
                 }
             }
@@ -239,5 +293,4 @@ public class PathPlanningServiceImpl implements PathPlanningService {
 
         return result;
     }
-
 }
