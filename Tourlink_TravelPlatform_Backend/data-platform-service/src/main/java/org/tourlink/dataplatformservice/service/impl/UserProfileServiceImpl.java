@@ -72,12 +72,12 @@ public class UserProfileServiceImpl implements UserProfileService {
         UserProfile userProfile = userProfileRepository.findByUserId(userId)
                 .orElseThrow(() -> new RuntimeException("用户不存在！"));
 
-        return UserProfileDTO.builder()
-                .userId(userProfile.getUserId())
-                .tagUpdateTimes(userProfile.getTagUpdateTimes())
-                .tagWeights(userProfile.getTagWeights())
-                .topTags(userProfile.getTopTags())
-                .build();
+        return new UserProfileDTO(
+                userProfile.getUserId(),
+                userProfile.getTopTags(),
+                userProfile.getTagWeights(),
+                userProfile.getTagUpdateTimes()
+        );
     }
 
     private UserProfile createNewProfile(String userId) {

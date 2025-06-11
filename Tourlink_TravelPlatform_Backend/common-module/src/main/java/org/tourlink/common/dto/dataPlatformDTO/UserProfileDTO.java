@@ -4,11 +4,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Map;
 
-import lombok.Builder;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 
 @Data
-@Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class UserProfileDTO {
 
     private String userId;
@@ -18,4 +18,15 @@ public class UserProfileDTO {
     private Map<String, Double> tagWeights;
 
     private Map<String, LocalDateTime> tagUpdateTimes;
+
+    // 显式添加全参构造器
+    public UserProfileDTO(String userId, List<String> topTags,
+                          Map<String, Double> tagWeights,
+                          Map<String, LocalDateTime> tagUpdateTimes) {
+        this.userId = userId;
+        this.topTags = topTags;
+        this.tagWeights = tagWeights;
+        this.tagUpdateTimes = tagUpdateTimes;
+    }
+
 }

@@ -33,6 +33,13 @@ public class BlogConverter {
         summary.setViewCount(blog.getViewCount());
         summary.setCommentCount(blog.getCommentCount());
 
+        // 安全处理封面图
+        if (blog.getImages() != null && !blog.getImages().isEmpty()) {
+            summary.setCoverImage(blog.getImages().get(0));
+        } else {
+            summary.setCoverImage(null); // 或者 ""
+        }
+
         return summary;
     }
 }

@@ -15,4 +15,6 @@ public class BlogSummary {
     private Integer viewCount;
     private Integer commentCount;
 
+    private String coverImage;
+
 }
