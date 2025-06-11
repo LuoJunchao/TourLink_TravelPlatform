@@ -1,6 +1,7 @@
 package org.tourlink.socialservice.repository;
 
 import jakarta.transaction.Transactional;
+import org.jetbrains.annotations.NotNull;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -39,4 +40,6 @@ public interface BlogRepository extends CrudRepository<Blog, Long> {
     List<Blog> findByUserIdOrderByPublishTime(String userId);
 
     Page<Blog> findAll(Specification<Blog> spec, Pageable pageable);
+
+    @NotNull List<Blog> findAllById(@NotNull Iterable<Long> blogIds);
 }

@@ -21,4 +21,6 @@ public interface BlogService {
     Page<BlogSummary> getRecommendedBlogs(String userId, String strategy, Pageable pageable);
 
     Page<BlogSummary> getBlogRanking(String sortBy, String timeRange, Pageable pageable);
+
+    List<BlogResponse> getBlogs(List<Long> blogIds);
 }
