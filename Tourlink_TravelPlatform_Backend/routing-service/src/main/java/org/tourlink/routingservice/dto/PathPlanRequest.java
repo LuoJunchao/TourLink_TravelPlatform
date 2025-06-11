@@ -11,5 +11,6 @@ public class PathPlanRequest {
     private String toCity;    // 目的城市
     private int maxDays;
     private String userId;    // 新增：用户ID，用于后端调取标签权重
+    private String transportMode; // 可选：FLIGHT / TRAIN / null（自动推荐）
     private UserPreference userPreference; // 这里可以保留，selectedTags 依然由前端传输，tagWeights由后端获取
 }
