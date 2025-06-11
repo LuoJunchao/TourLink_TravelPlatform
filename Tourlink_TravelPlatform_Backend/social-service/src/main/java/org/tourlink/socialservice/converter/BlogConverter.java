@@ -4,7 +4,6 @@ import org.tourlink.common.dto.socialDTO.BlogResponse;
 import org.tourlink.common.dto.socialDTO.BlogSummary;
 import org.tourlink.socialservice.entity.Blog;
 
-
 public class BlogConverter {
     public static BlogResponse toResponse(Blog blog) {
 
