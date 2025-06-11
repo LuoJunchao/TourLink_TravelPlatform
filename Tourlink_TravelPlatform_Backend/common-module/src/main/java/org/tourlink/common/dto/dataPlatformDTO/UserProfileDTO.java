@@ -19,6 +19,8 @@ public class UserProfileDTO {
 
     private Map<String, LocalDateTime> tagUpdateTimes;
 
+    public UserProfileDTO() {}
+
     // 显式添加全参构造器
     public UserProfileDTO(String userId, List<String> topTags,
                           Map<String, Double> tagWeights,
