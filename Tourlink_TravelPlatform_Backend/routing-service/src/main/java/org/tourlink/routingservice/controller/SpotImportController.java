@@ -1,34 +1,77 @@
 package org.tourlink.routingservice.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.opencsv.CSVReader;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
-import org.tourlink.routingservice.service.SpotImportService;
+import org.tourlink.routingservice.entity.Spot;
+import org.tourlink.routingservice.respository.SpotRepository;
+import lombok.extern.slf4j.Slf4j;
 
-import java.io.IOException;
-
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+@Slf4j
 @RestController
-@RequestMapping("/api/import")
+@RequestMapping("/api/spot/import")
+@RequiredArgsConstructor
 public class SpotImportController {
 
-    @Autowired
-    private SpotImportService spotImportService;
+    private final SpotRepository spotRepository;
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
-    @PostMapping("/spots")
-    public ResponseEntity<String> importSpots(@RequestParam("file") MultipartFile file) {
-        try {
-            // 修改点：先清空数据库，再导入新数据
-            spotImportService.clearAllSpots(); // 新增清空方法
-            spotImportService.importSpotsFromCsv(file.getInputStream());
-            return ResponseEntity.ok("景点数据已清空并成功导入新景点！");
-        } catch (IOException e) {
-            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-                    .body("导入失败: " + e.getMessage());
+    @PostMapping("/csv")
+    public ResponseEntity<String> importCsv(@RequestParam("file") MultipartFile file) {
+        log.info("收到文件：{}", file.getOriginalFilename());
+        if (file.isEmpty()) {
+            return ResponseEntity.badRequest().body("上传的文件为空！");
         }
+
+        try (CSVReader reader = new CSVReader(new InputStreamReader(file.getInputStream()))) {
+            List<Spot> spotList = new ArrayList<>();
+            String[] row;
+            while ((row = reader.readNext()) != null) {
+                Spot spot = convertRowToSpot(row);
+                spotList.add(spot);
+            }
+            spotRepository.saveAll(spotList);
+            return ResponseEntity.ok("成功导入 " + spotList.size() + " 条数据！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.status(500).body("导入失败: " + e.getMessage());
+        }
+    }
+
+    private Spot convertRowToSpot(String[] row) {
+        Spot spot = new Spot();
+        try {
+            spot.setName(row[10]);
+            spot.setPrice(row[11].isEmpty() ? 0 : Double.parseDouble(row[11]));
+            spot.setRating(row[2].isEmpty() ? 0 : Double.parseDouble(row[2]));
+            spot.setSales(row[17].isEmpty() ? 0 : Integer.parseInt(row[17]));
+
+            String[] coords = row[3].split(",");
+            spot.setLongitude(Double.parseDouble(coords[0]));
+            spot.setLatitude(Double.parseDouble(coords[1]));
+
+            List<String> timeSlots = row[14] == null ? new ArrayList<>() : Arrays.asList(row[14].split(","));
+            spot.setTimeSlots(timeSlots);
+
+            List<String> tags = row[19] == null || row[19].isEmpty() ? new ArrayList<>() :
+                    objectMapper.readValue(row[19].replaceAll("“|”", "\""), new TypeReference<List<String>>() {});
+            spot.setTags(tags);
+
+
+        } catch (Exception e) {
+            log.error("解析失败，跳过此行：" + Arrays.toString(row), e);
+        }
+        return spot;
     }
 }
