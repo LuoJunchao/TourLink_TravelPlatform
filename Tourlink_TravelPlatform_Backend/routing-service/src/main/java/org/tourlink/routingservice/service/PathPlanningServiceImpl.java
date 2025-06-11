@@ -21,7 +21,7 @@ public class PathPlanningServiceImpl implements PathPlanningService {
 
     @Override
     public PathPlanResponse planRoute(PathPlanRequest request) {
-        List<Spot> allSpots = spotRepository.findAll();
+        List<Spot> allSpots = spotRepository.findByCityName(request.getToCity());
         String transportMode = request.getTransportMode();
 
         // 调用遗传算法核心逻辑（假设已封装）

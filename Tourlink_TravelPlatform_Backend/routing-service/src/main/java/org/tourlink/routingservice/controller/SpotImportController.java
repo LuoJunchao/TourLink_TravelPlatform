@@ -48,6 +48,11 @@ public class SpotImportController {
             return ResponseEntity.status(500).body("导入失败: " + e.getMessage());
         }
     }
+    private String extractCityName(String locationField) {
+        if (locationField == null || locationField.isEmpty()) return "未知";
+        String[] parts = locationField.split("·");
+        return parts.length >= 2 ? parts[1].trim() : "未知";
+    }
 
     private Spot convertRowToSpot(String[] row) {
         Spot spot = new Spot();
@@ -57,9 +62,13 @@ public class SpotImportController {
             spot.setRating(row[2].isEmpty() ? 0 : Double.parseDouble(row[2]));
             spot.setSales(row[17].isEmpty() ? 0 : Integer.parseInt(row[17]));
 
-            String[] coords = row[3].split(",");
+            String[] coords = row[3].replace("\"", "").split(",");
             spot.setLongitude(Double.parseDouble(coords[0]));
             spot.setLatitude(Double.parseDouble(coords[1]));
+
+            // ✅ 提取 cityName 字段，来自类似 "湖北·宜昌·三峡大坝旅游区"
+            String cityRaw = row[15].trim(); // row[15] 是“湖北·宜昌·三峡大坝旅游区”
+            spot.setCityName(extractCityName(cityRaw));
 
             List<String> timeSlots = row[14] == null ? new ArrayList<>() : Arrays.asList(row[14].split(","));
             spot.setTimeSlots(timeSlots);
@@ -68,10 +77,10 @@ public class SpotImportController {
                     objectMapper.readValue(row[19].replaceAll("“|”", "\""), new TypeReference<List<String>>() {});
             spot.setTags(tags);
 
-
         } catch (Exception e) {
             log.error("解析失败，跳过此行：" + Arrays.toString(row), e);
         }
         return spot;
     }
+
 }

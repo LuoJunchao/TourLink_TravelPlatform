@@ -34,15 +34,15 @@ public class PathPlanController {
     @PostMapping("/plan")
     public ResponseEntity<PathPlanResponse> planRoute(@RequestBody PathPlanRequest request) {
         // 用户标签处理
-        UserProfileDTO userProfile = dataPlatformClient.getUserProfile(request.getUserId());
-        Map<String, Double> tagWeights = (userProfile != null && userProfile.getTagWeights() != null)
-                ? userProfile.getTagWeights()
-                : Collections.emptyMap();
-
-        if (request.getUserPreference() == null) {
-            request.setUserPreference(new UserPreference());
-        }
-        request.getUserPreference().setTagWeights(tagWeights);
+//        UserProfileDTO userProfile = dataPlatformClient.getUserProfile(request.getUserId());
+//        Map<String, Double> tagWeights = (userProfile != null && userProfile.getTagWeights() != null)
+//                ? userProfile.getTagWeights()
+//                : Collections.emptyMap();
+//
+//        if (request.getUserPreference() == null) {
+//            request.setUserPreference(new UserPreference());
+//        }
+//        request.getUserPreference().setTagWeights(tagWeights);
 
         // 获取交通模式（校验）
         String transportMode = request.getTransportMode();

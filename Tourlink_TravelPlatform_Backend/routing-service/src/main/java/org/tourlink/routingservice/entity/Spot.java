@@ -30,6 +30,9 @@ public class Spot {
     @Column(nullable = false)
     private double longitude;
 
+    @Column(nullable = false)
+    private String cityName;
+
     @ElementCollection
     @CollectionTable(name = "spot_time_slot", joinColumns = @JoinColumn(name = "spot_id"))
     @Column(name = "time_slot")
