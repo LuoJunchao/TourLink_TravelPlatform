@@ -3,6 +3,7 @@ package org.tourlink.socialservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.tourlink.common.dto.socialDTO.LikeRequest;
 import org.tourlink.common.dto.socialDTO.LikeResponse;
 import org.tourlink.socialservice.service.LikeService;
 
@@ -15,10 +16,8 @@ public class LikeController {
 
     // 点赞
     @PostMapping
-    public ResponseEntity<LikeResponse> likeBlog(
-            @RequestParam Long blogId,
-            @RequestParam String userId) {
-        return ResponseEntity.ok(likeService.like(blogId, userId));
+    public ResponseEntity<LikeResponse> likeBlog(@RequestBody LikeRequest likeRequest) {
+        return ResponseEntity.ok(likeService.like(likeRequest.getBlogId(), likeRequest.getUserId()));
     }
 
     // 取消点赞

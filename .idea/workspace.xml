@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="6.10 .1">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0661cd06-684d-4801-a21b-d9a69bf2e145.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0661cd06-684d-4801-a21b-d9a69bf2e145.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/a445876c-ac00-4ba9-8bcf-9716b1c1a402.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/a445876c-ac00-4ba9-8bcf-9716b1c1a402.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b91e689c-23e6-4a3d-a098-bc0c12e9fbbe.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b91e689c-23e6-4a3d-a098-bc0c12e9fbbe.xml" afterDir="false" />
+    <list default="true" id="0a5f9a91-636b-4500-8110-76b5b3130de9" name="更改" comment="final 1.0">
+      <change afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/socialDTO/LikeRequest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/socialDTO/BlogResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/common-module/src/main/java/org/tourlink/common/dto/socialDTO/BlogResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/java/org/tourlink/dataplatformservice/entity/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/attraction-service/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/data-platform-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/routing-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/converter/BlogConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/converter/BlogConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/AttractionTagService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/LikeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/controller/LikeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/java/org/tourlink/socialservice/service/impl/ShareServiceImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/Tourlink_TravelPlatform_Backend/social-service/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,8 +39,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Dockerfile" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -185,7 +178,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.SocialServiceApplication">
+  <component name="RunManager" selected="Spring Boot.AttractionServiceApplication">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="dataPlatform-service" />
       <option name="ENV_FILES" value="" />
@@ -527,7 +520,7 @@
       <workItem from="1749315320120" duration="2934000" />
       <workItem from="1749459771527" duration="4681000" />
       <workItem from="1749485144306" duration="28000" />
-      <workItem from="1749656801146" duration="8069000" />
+      <workItem from="1749656801146" duration="15720000" />
     </task>
     <task id="LOCAL-00001" summary="数据中台添加了 UserProfile.java 和 UserBehaviorLog.java 实体表&#10;完善common-module模块内容">
       <option name="closed" value="true" />
@@ -633,7 +626,15 @@
       <option name="project" value="LOCAL" />
       <updated>1749643183500</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="final 1.0">
+      <option name="closed" value="true" />
+      <created>1749665412489</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1749665412489</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -651,6 +652,7 @@
     <MESSAGE value="初步完成数据中台和社交服务全部接口" />
     <MESSAGE value="6.10 .1" />
     <MESSAGE value="social 和 dataplatform 基本测试完成，功能完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="social 和 dataplatform 基本测试完成，功能完善" />
+    <MESSAGE value="final 1.0" />
+    <option name="LAST_COMMIT_MESSAGE" value="final 1.0" />
   </component>
 </project>

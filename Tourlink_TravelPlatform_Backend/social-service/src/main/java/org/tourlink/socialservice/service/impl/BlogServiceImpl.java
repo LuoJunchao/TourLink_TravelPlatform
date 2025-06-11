@@ -150,7 +150,7 @@ public class BlogServiceImpl implements BlogService {
     /**
      * 搜索博客
      * @param keyword 关键词
-     * @param searchType 搜索类型 (title/content/tag)
+     * @param searchType 搜索类型 (title/content)
      * @param pageable 分页参数
      * @return 分页的博客摘要
      */
