@@ -256,12 +256,11 @@ public class BlogServiceImpl implements BlogService {
 
     private Sort.Order convertToSortOrder(String sortField) {
         return switch (sortField.toLowerCase()) {
-            case "view" -> Sort.Order.desc("viewCount");
             case "like" -> Sort.Order.desc("likeCount");
             case "comment" -> Sort.Order.desc("commentCount");
             case "new" -> Sort.Order.desc("publishTime");
-            default -> // hot
-                    Sort.Order.desc("hotScore");
+            default ->
+                Sort.Order.desc("viewCount");
         };
     }
 

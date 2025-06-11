@@ -24,12 +24,6 @@
             <artifactId>spring-cloud-starter-gateway</artifactId>
         </dependency>
 
-        <!-- Nacos Discovery -->
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
-        </dependency>
-
         <!-- Spring Cloud LoadBalancer（用于负载均衡） -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

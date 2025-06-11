@@ -1,5 +1,6 @@
 package org.tourlink.routingservice.service;
 
+import jakarta.transaction.Transactional;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,10 @@ public class SpotImportService {
     @Autowired
     private SpotRepository spotRepository;
 
+    @Transactional // 添加事务管理
+    public void clearAllSpots() {
+        spotRepository.deleteAll(); // 清空数据库表
+    }
     public void importSpotsFromCsv(InputStream csvStream) throws IOException {
         CSVFormat format = CSVFormat.DEFAULT.builder()
                 .setHeader()

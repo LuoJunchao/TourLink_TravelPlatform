@@ -13,6 +13,7 @@ import org.tourlink.userservice.dto.AuthResponse;
 import org.tourlink.userservice.dto.LoginRequest;
 import org.tourlink.userservice.dto.RegisterRequest;
 import org.tourlink.userservice.dto.UserRequest;
+import org.tourlink.userservice.dto.UserUpdateRequest;
 import org.tourlink.userservice.entity.User;
 import org.tourlink.userservice.repository.UserRepository;
 import org.tourlink.userservice.service.UserService;
@@ -77,33 +78,29 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public User updateUser(Long id, UserRequest userRequest) {
+    public User updateUser(Long id, UserUpdateRequest userUpdateRequest) {
         User existingUser = getUserById(id);
 
         // 如果用户名变更，检查是否已存在
-        if (!existingUser.getUsername().equals(userRequest.getUsername())) {
-            User userWithSameUsername = userRepository.findByUsername(userRequest.getUsername());
+        if (!existingUser.getUsername().equals(userUpdateRequest.getUsername())) {
+            User userWithSameUsername = userRepository.findByUsername(userUpdateRequest.getUsername());
             if (userWithSameUsername != null && !userWithSameUsername.getId().equals(id)) {
                 throw new IllegalArgumentException("用户名已存在");
             }
-            existingUser.setUsername(userRequest.getUsername());
+            existingUser.setUsername(userUpdateRequest.getUsername());
         }
 
         // 如果邮箱变更，检查是否已存在
-        if (userRequest.getEmail() != null && !userRequest.getEmail().equals(existingUser.getEmail())) {
-            User userWithSameEmail = userRepository.findByEmail(userRequest.getEmail());
+        if (userUpdateRequest.getEmail() != null && !userUpdateRequest.getEmail().equals(existingUser.getEmail())) {
+            User userWithSameEmail = userRepository.findByEmail(userUpdateRequest.getEmail());
             if (userWithSameEmail != null && !userWithSameEmail.getId().equals(id)) {
                 throw new IllegalArgumentException("邮箱已存在");
             }
-            existingUser.setEmail(userRequest.getEmail());
+            existingUser.setEmail(userUpdateRequest.getEmail());
         }
 
-        // 更新其他字段
-        if (userRequest.getPassword() != null && !userRequest.getPassword().isEmpty()) {
-            existingUser.setPassword(passwordEncoder.encode(userRequest.getPassword()));
-        }
-
-        existingUser.setPhoneNumber(userRequest.getPhoneNumber());
+        // 更新手机号
+        existingUser.setPhoneNumber(userUpdateRequest.getPhoneNumber());
         existingUser.setUpdatedAt(LocalDateTime.now());
 
         return userRepository.save(existingUser);
