@@ -1,24 +1,28 @@
 package org.tourlink.attractionservice.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import org.tourlink.attractionservice.entity.AttractionFavorite;
 import org.tourlink.attractionservice.service.AttractionFavoriteService;
 import org.tourlink.attractionservice.service.AttractionService;
+import org.tourlink.attractionservice.service.event.BehaviorEventSender;
+import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/attraction-favorites")
+@RequiredArgsConstructor
 public class AttractionFavoriteController {
 
-    @Autowired
-    private AttractionFavoriteService favoriteService;
+    private final AttractionFavoriteService favoriteService;
 
-    @Autowired
-    private AttractionService attractionService;
+    private final AttractionService attractionService;
+
+    private final BehaviorEventSender behaviorEventSender;
 
     @GetMapping("/user/{userId}")
     public ResponseEntity<List<AttractionFavorite>> getUserFavorites(@PathVariable Long userId) {
@@ -36,6 +40,16 @@ public class AttractionFavoriteController {
         if (favoriteService.isAttractionFavoritedByUser(favorite.getAttraction().getId(), favorite.getUserId())) {
             return ResponseEntity.badRequest().body(null);
         }
+
+        // 发送行为消息
+        UserBehaviorMessage message = new UserBehaviorMessage(
+                String.valueOf(favorite.getUserId()),
+                "ATTRACTION",
+                favorite.getAttraction().getId(),
+                "COLLECT",
+                LocalDateTime.now()
+        );
+        behaviorEventSender.send(message);
 
         return ResponseEntity.ok(favoriteService.addFavorite(favorite));
     }

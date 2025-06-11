@@ -22,8 +22,10 @@ public class SpotImportController {
     @PostMapping("/spots")
     public ResponseEntity<String> importSpots(@RequestParam("file") MultipartFile file) {
         try {
+            // 修改点：先清空数据库，再导入新数据
+            spotImportService.clearAllSpots(); // 新增清空方法
             spotImportService.importSpotsFromCsv(file.getInputStream());
-            return ResponseEntity.ok("景点导入成功！");
+            return ResponseEntity.ok("景点数据已清空并成功导入新景点！");
         } catch (IOException e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("导入失败: " + e.getMessage());

@@ -3,50 +3,35 @@ server:
 spring:
   application:
     name: gateway-service
-  config:
-    import: nacos:gateway-service-dev.yml
   cloud:
     gateway:
-      globalcors:
-        cors-configurations:
-          '[/**]':
-            allowedOrigins: "*"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-              - OPTIONS
-            allowedHeaders: "*"
-            allowCredentials: true
-            maxAge: 3600
       routes:
         - id: attraction-service
-          uri: http://47.117.153.17:9080
+          uri: http://localhost:9080
           predicates:
             - Path=/attraction/**
           filters:
             - StripPrefix=1
         - id: data-platform-service
-          uri: http://47.117.153.17:9081
+          uri: http://localhost:9081
           predicates:
             - Path=/data-platform/**
           filters:
             - StripPrefix=1
         - id: routing-service
-          uri: http://47.117.153.17:9083
+          uri: http://localhost:9083
           predicates:
             - Path=/routing/**
           filters:
             - StripPrefix=1
         - id: social-service
-          uri: http://47.117.153.17:9084
+          uri: http://localhost:9084
           predicates:
             - Path=/social/**
           filters:
             - StripPrefix=1
         - id: user-service
-          uri: http://47.117.153.17:9085
+          uri: http://localhost:9085
           predicates:
             - Path=/user/**
           filters:

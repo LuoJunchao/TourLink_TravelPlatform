@@ -3,6 +3,7 @@ server:
 spring:
   application:
     name: social-service
+  cloud:
     openfeign:
       client:
         config:

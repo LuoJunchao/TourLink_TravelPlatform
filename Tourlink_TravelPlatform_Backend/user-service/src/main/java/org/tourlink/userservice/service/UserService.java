@@ -5,6 +5,7 @@ import org.tourlink.userservice.dto.AuthResponse;
 import org.tourlink.userservice.dto.LoginRequest;
 import org.tourlink.userservice.dto.RegisterRequest;
 import org.tourlink.userservice.dto.UserRequest;
+import org.tourlink.userservice.dto.UserUpdateRequest;
 import org.tourlink.userservice.entity.User;
 import java.util.List;
 
@@ -12,7 +13,7 @@ public interface UserService {
     User createUser(UserRequest userRequest);
     User getUserById(Long id);
     List<User> getAllUsers();
-    User updateUser(Long id, UserRequest userRequest);
+    User updateUser(Long id, UserUpdateRequest userUpdateRequest);
     void deleteUser(Long id);
     List<Long> getUserBlogs(Long userId);
     List<Long> getUserFavorites(Long userId);

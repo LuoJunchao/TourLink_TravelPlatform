@@ -8,6 +8,7 @@ import org.tourlink.common.dto.userDTO.UserBasicDTO;
 import org.tourlink.common.response.ApiResponse;
 import org.tourlink.userservice.dto.UserRequest;
 import org.tourlink.userservice.dto.UserResponse;
+import org.tourlink.userservice.dto.UserUpdateRequest;
 import org.tourlink.userservice.service.UserService;
 
 import java.util.Arrays;
@@ -41,8 +42,8 @@ public class UserController {
     @PutMapping("/{id}")
     public ResponseEntity<UserResponse> updateUser(
             @PathVariable Long id,
-            @Valid @RequestBody UserRequest userRequest) {
-        return ResponseEntity.ok(UserResponse.fromEntity(userService.updateUser(id, userRequest)));
+            @Valid @RequestBody UserUpdateRequest userUpdateRequest) {
+        return ResponseEntity.ok(UserResponse.fromEntity(userService.updateUser(id, userUpdateRequest)));
     }
 
     @DeleteMapping("/{id}")
