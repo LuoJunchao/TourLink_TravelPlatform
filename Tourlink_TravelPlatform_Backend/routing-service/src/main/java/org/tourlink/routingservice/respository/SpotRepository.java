@@ -13,4 +13,6 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
 public interface SpotRepository extends JpaRepository<Spot, Long> {
+    List<Spot> findByCityName(String cityName);
+
 }
