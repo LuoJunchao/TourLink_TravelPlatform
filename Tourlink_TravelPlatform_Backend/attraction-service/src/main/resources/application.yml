@@ -16,6 +16,12 @@ spring:
       max-lifetime: 1800000      # 连接最大生命周期，30分钟
       validation-timeout: 3000   # 验证查询超时时间，3秒
       connection-test-query: SELECT 1  # 连接测试查询
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /
   jpa:
     hibernate:
       ddl-auto: update

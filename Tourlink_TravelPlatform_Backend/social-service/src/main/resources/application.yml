@@ -4,9 +4,6 @@ spring:
   application:
     name: social-service
   cloud:
-    nacos:
-      discovery:
-        server-addr: 47.117.153.17:8848
     openfeign:
       client:
         config:
