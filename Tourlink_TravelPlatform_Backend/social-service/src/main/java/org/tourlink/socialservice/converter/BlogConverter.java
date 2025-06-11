@@ -18,6 +18,7 @@ public class BlogConverter {
         blogResponse.setViewCount(blog.getViewCount());
         blogResponse.setLikeCount(blog.getLikeCount());
         blogResponse.setCommentCount(blog.getCommentCount());
+        blogResponse.setImages(blog.getImages());
 
         return blogResponse;
     }
