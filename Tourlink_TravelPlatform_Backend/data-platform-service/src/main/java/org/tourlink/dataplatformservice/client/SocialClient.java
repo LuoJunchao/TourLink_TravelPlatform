@@ -10,7 +10,7 @@ import java.util.List;
  * 社交服务Feign客户端
  * 用于调用社交服务的API
  */
-@FeignClient(name = "social-service", path = "/api/social/blogs")
+@FeignClient(name = "social-service", url = "http://localhost:9084", path = "/api/social/blogs")
 public interface SocialClient {
 
     @GetMapping("/{blogId}/tags")

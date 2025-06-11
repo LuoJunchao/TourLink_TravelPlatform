@@ -48,6 +48,7 @@ public class UserProfile {
      * 每个标签更新的最后时间
      * 示例：{"自然风光": "2025-06-01T00:00:00", "文化遗产": "2025-06-05T12:34:56"}
      */
+    @Lob
     @Convert(converter = StringLocalDateTimeMapJsonConverter.class)
     @Column(name = "tag_update_times")
     private Map<String, LocalDateTime> tagUpdateTimes;

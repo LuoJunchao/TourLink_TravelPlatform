@@ -17,8 +17,6 @@ public class BlogResponse {
     private LocalDateTime publishTime;
     private Integer viewCount;
     private Integer likeCount;
-    private Integer shareCount;
     private Integer commentCount;
-    private double hotScore;
 
 }

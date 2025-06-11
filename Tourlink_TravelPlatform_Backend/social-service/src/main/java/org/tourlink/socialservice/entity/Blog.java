@@ -54,11 +54,6 @@ public class Blog {
     @Column(name = "view_count", columnDefinition = "INT DEFAULT 0")
     private Integer viewCount = 0;
 
-    @Column(name = "share_count", columnDefinition = "INT DEFAULT 0")
-    private Integer shareCount = 0;
-
-    @Column(name = "hot_score", columnDefinition = "DOUBLE DEFAULT 0")
-    private Double hotScore = 0.0; // 推荐权重（博客热度）
 
 }
 

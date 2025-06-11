@@ -58,8 +58,6 @@ public class BlogServiceImpl implements BlogService {
         blog.setLikeCount(0);
         blog.setCommentCount(0);
         blog.setViewCount(0);
-        blog.setHotScore(0.0);
-
 
         // 2. 设置关联景点 ID （request 中包含）
         if (request.getAttractionIds() != null && !request.getAttractionIds().isEmpty()) {
@@ -94,8 +92,15 @@ public class BlogServiceImpl implements BlogService {
             log.info("Fetching tags for attraction: {}", attractionId);
             ApiResponse<AttractionTagsDTO> response = attractionClient.getAttractionTags(attractionId);
             log.info("Response: {}", response);
+
             if (response != null && response.getData() != null) {
-                tagSet.addAll(response.getData().getTags());
+                List<String> rawTags = response.getData().getTags();
+                if (rawTags != null && !rawTags.isEmpty()) {
+                    for (String rawTag : rawTags) {
+                        String[] splitTags = rawTag.split("\\s+");
+                        tagSet.addAll(Arrays.asList(splitTags));
+                    }
+                }
             }
         }
         blog.setCachedTags(new ArrayList<>(tagSet));
@@ -201,15 +206,10 @@ public class BlogServiceImpl implements BlogService {
             List<Predicate> predicates = new ArrayList<>();
             String pattern = "%" + keyword + "%";
 
-            switch (searchType.toLowerCase()) {
-                case "content":
-                    predicates.add(criteriaBuilder.like(root.get("content"), "%" + keyword + "%"));
-                    break;
-                case "tag":
-                    predicates.add(criteriaBuilder.like(root.get("cachedTags"), "%" + keyword + "%"));
-                    break;
-                default: // title
-                    predicates.add(criteriaBuilder.like(root.get("title"),pattern));
+            if (searchType.equalsIgnoreCase("content")) {
+                predicates.add(criteriaBuilder.like(root.get("content"), "%" + keyword + "%"));
+            } else {
+                predicates.add(criteriaBuilder.like(root.get("title"), pattern));
             }
 
             return criteriaBuilder.and(predicates.toArray(new Predicate[0]));
@@ -242,7 +242,7 @@ public class BlogServiceImpl implements BlogService {
                 .map(this::convertToSortOrder)
                 .collect(Collectors.toList());
 
-        //  3. 确保结果稳定性
+        //  1. 确保结果稳定性
         if (orders.stream().noneMatch(o -> "publishTime".equals(o.getProperty()))) {
             orders.add(convertToSortOrder("publishTime"));
         }

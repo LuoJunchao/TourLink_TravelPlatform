@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 
-@Converter()
+@Converter(autoApply = true)
 public abstract class JsonAttributeConverter<T> implements AttributeConverter<T, String> {
 
     private static final ObjectMapper objectMapper = new ObjectMapper();
