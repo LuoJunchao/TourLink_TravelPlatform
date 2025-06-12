@@ -15,7 +15,7 @@ public class GeoUtils {
         return 6371 * c;
     }
     public static double estimatePrice(double distanceKm, String type) {
-        if ("FLIGHT".equals(type)) {
+        if ("AIRPORT".equals(type)) {
             return distanceKm * 0.6 + 150;
         } else {
             return distanceKm * 0.45 + 50;

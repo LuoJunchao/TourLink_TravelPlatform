@@ -103,10 +103,12 @@ public class PathPlanningServiceImpl implements PathPlanningService {
 
         for (int gen = 0; gen < 100; gen++) {
             // 评估适应度
-            population.sort((a, b) -> Double.compare(fitness(b, pref), fitness(a, pref)));
+            population.sort((a, b) -> Double.compare(
+                    fitness(b, pref, request.getMaxDays()),
+                    fitness(a, pref, request.getMaxDays())
+            ));
 
-            // 记录最优个体
-            double f = fitness(population.get(0), pref);
+            double f = fitness(population.get(0), pref, request.getMaxDays());
             if (f > bestFitness) {
                 bestFitness = f;
                 best = new ArrayList<>(population.get(0));
@@ -129,7 +131,7 @@ public class PathPlanningServiceImpl implements PathPlanningService {
         if (best == null) {
             best = population.get(0); // 或随机一条
         }
-        List<PlannedRoute> routes = decode(best);
+        List<PlannedRoute> routes = decode(best,request.getMaxDays());
         response.setDailyRoutes(routes);
 //        response.setEstimatedTransportPrice(transportPrice);
         return response;
@@ -184,8 +186,8 @@ public class PathPlanningServiceImpl implements PathPlanningService {
     }
 
 
-    private double fitness(List<Spot> sequence, UserPreference pref) {
-        List<PlannedRoute> plan = decode(sequence);
+    private double fitness(List<Spot> sequence, UserPreference pref, int maxDays){
+        List<PlannedRoute> plan = decode(sequence, maxDays);
         double score = 0;
         for (PlannedRoute route : plan) {
             int timeUtil = 0;
@@ -195,7 +197,7 @@ public class PathPlanningServiceImpl implements PathPlanningService {
                 score += rating * 2;
                 for (String tag : spot.getTags()) {
                     score += pref.getTagWeights().getOrDefault(tag, 0.0);
-                    if (pref.getSelectedTags().contains(tag)) score += 2.0;
+                    if (pref.getSelectedTags()!=null && pref.getSelectedTags().contains(tag)) score += 2.0;
                 }
                 score -= 0.02 * spot.getPrice();
                 score -= 0.01 * spot.getSales();
@@ -227,12 +229,11 @@ public class PathPlanningServiceImpl implements PathPlanningService {
         return result;
     }
 
-    private List<PlannedRoute> decode(List<Spot> route) {
+    private List<PlannedRoute> decode(List<Spot> route, int maxDays){
         // 显式指定每天最多容纳的时间段（上午100、下午010、晚上001 => 3 bit）
-        final int MAX_DAYS = 3; // 可按需扩展
 
         // 每天的景点列表
-        List<List<Spot>> dailySpots = splitIntoDays(route, MAX_DAYS); // 拆分为每天的子列表
+        List<List<Spot>> dailySpots = splitIntoDays(route, maxDays); // 拆分为每天的子列表
 
         // 可读时间段映射
         Map<String, String> readable = Map.of(
