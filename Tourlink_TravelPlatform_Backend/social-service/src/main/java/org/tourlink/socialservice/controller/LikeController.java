@@ -35,5 +35,13 @@ public class LikeController {
         return ResponseEntity.ok(likeService.getLikeCount(blogId));
     }
 
+    // 查询用户是否点赞该服务
+    @GetMapping("/status")
+    public ResponseEntity<Boolean> getLikeStatus(
+            @RequestParam Long blogId,
+            @RequestParam String userId) {
+        return ResponseEntity.ok(likeService.hasLiked(blogId, userId));
+    }
+
 }
 

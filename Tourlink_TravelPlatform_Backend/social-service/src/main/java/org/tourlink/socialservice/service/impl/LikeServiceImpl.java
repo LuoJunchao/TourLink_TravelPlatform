@@ -120,4 +120,14 @@ public class LikeServiceImpl implements LikeService {
         return blog.getLikeCount();
     }
 
+    @Override
+    public Boolean hasLiked(Long blogId, String userId) {
+
+        // 1. 根据 blogId 确定 blog
+        Blog blog = blogRepository.findById(blogId)
+                .orElseThrow(() -> new EntityNotFoundException("博客不存在:" + blogId));
+
+        return likeRepository.existsByBlogAndUserId(blog, userId);
+    }
+
 }
