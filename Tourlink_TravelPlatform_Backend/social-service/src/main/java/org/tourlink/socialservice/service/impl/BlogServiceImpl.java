@@ -202,13 +202,13 @@ public class BlogServiceImpl implements BlogService {
     }
 
     @Override
-    public List<BlogResponse> getBlogs(List<Long> blogIds) {
+    public List<BlogSummary> getBlogs(List<Long> blogIds) {
 
         List<Blog> blogs = blogRepository.findAllById(blogIds);
 
         // 1. 转换为 BlogResponse 列表
         return blogs.stream()
-                .map(BlogConverter::toResponse)
+                .map(BlogConverter::toSummary)
                 .collect(Collectors.toList());
 
     }
