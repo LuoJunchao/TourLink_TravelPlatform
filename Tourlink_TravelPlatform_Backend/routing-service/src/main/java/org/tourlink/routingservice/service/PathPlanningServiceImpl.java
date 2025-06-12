@@ -231,6 +231,17 @@ public class PathPlanningServiceImpl implements PathPlanningService {
 
     private List<PlannedRoute> decode(List<Spot> route, int maxDays){
         // 显式指定每天最多容纳的时间段（上午100、下午010、晚上001 => 3 bit）
+        // 时间段排序权重（越小越早）
+        Map<String, Integer> timeSlotOrder = Map.of(
+                "上午", 0,
+                "上午+下午", 1,
+                "下午", 2,
+                "下午+晚上", 3,
+                "晚上", 4,
+                "上午+晚上", 5,
+                "全天", 6,
+                "未知", 999
+        );
 
         // 每天的景点列表
         List<List<Spot>> dailySpots = splitIntoDays(route, maxDays); // 拆分为每天的子列表
@@ -288,7 +299,11 @@ public class PathPlanningServiceImpl implements PathPlanningService {
 
             PlannedRoute routeForDay = new PlannedRoute();
             routeForDay.setDay(dayIndex + 1);
+            currentDay.sort(Comparator.comparingInt(ps ->
+                    timeSlotOrder.getOrDefault(ps.getAssignedTimeSlot(), 999)
+            ));
             routeForDay.setSpots(currentDay);
+
             result.add(routeForDay);
         }
 
