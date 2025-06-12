@@ -9,4 +9,6 @@ public interface LikeService {
     LikeResponse unlike(Long blogId, String userId);
 
     Integer getLikeCount(Long blogId);
+
+    Boolean hasLiked(Long blogId, String userId);
 }
