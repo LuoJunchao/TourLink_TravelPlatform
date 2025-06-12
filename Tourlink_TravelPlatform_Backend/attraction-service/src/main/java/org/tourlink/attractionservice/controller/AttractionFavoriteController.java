@@ -1,8 +1,11 @@
 package org.tourlink.attractionservice.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.tourlink.attractionservice.dto.AttractionFavoriteResponse;
+import java.util.List;
 
 import org.tourlink.attractionservice.entity.AttractionFavorite;
 import org.tourlink.attractionservice.service.AttractionFavoriteService;
@@ -11,11 +14,11 @@ import org.tourlink.attractionservice.service.event.BehaviorEventSender;
 import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/attraction-favorites")
 @RequiredArgsConstructor
+@Slf4j
 public class AttractionFavoriteController {
 
     private final AttractionFavoriteService favoriteService;
@@ -25,8 +28,19 @@ public class AttractionFavoriteController {
     private final BehaviorEventSender behaviorEventSender;
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<AttractionFavorite>> getUserFavorites(@PathVariable Long userId) {
-        return ResponseEntity.ok(favoriteService.getFavoritesByUserId(userId));
+    public ResponseEntity<List<AttractionFavoriteResponse>> getUserFavorites(@PathVariable Long userId) {
+        List<AttractionFavorite> favorites = favoriteService.getFavoritesByUserId(userId);
+        List<AttractionFavoriteResponse> response = favorites.stream()
+            .map(favorite -> {
+                AttractionFavoriteResponse dto = new AttractionFavoriteResponse();
+                dto.setFavoriteId(favorite.getFavoriteId());
+                dto.setAttractionId(favorite.getAttraction().getId());
+                dto.setUserId(favorite.getUserId());
+                dto.setCreatedTime(favorite.getCreatedTime());
+                return dto;
+            })
+            .toList();
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/attraction/{attractionId}/user/{userId}")
@@ -65,6 +79,17 @@ public class AttractionFavoriteController {
         AttractionFavorite favorite = new AttractionFavorite();
         favorite.setAttraction(attractionService.getAttractionEntityById(attractionId));
         favorite.setUserId(userId);
+
+        // 发送行为消息
+        UserBehaviorMessage message = new UserBehaviorMessage(
+                String.valueOf(favorite.getUserId()),
+                "ATTRACTION",
+                favorite.getAttraction().getId(),
+                "COLLECT",
+                LocalDateTime.now()
+        );
+        log.info("Sending user behavior message: {}", message);
+        behaviorEventSender.send(message);
 
         return ResponseEntity.ok(favoriteService.addFavorite(favorite));
     }

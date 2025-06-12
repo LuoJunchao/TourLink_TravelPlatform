@@ -43,10 +43,10 @@ public class BlogController {
     }
 
     // 批量获取博客详情
-    @GetMapping("/batch")
-    public ResponseEntity<List<BlogResponse>> getBlogs(@RequestBody List<Long> blogIds) {
-        List<BlogResponse> responses = blogService.getBlogs(blogIds);
-        return ResponseEntity.ok(responses);
+    @PostMapping("/batch")
+    public ResponseEntity<List<BlogSummary>> getBlogs(@RequestBody List<Long> blogIds) {
+        List<BlogSummary> summaries = blogService.getBlogs(blogIds);
+        return ResponseEntity.ok(summaries);
     }
 
     // 搜索博客（按标题/内容/标签匹配）
