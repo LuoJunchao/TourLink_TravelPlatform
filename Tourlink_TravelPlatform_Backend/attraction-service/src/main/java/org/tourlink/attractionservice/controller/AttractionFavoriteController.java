@@ -3,6 +3,9 @@ package org.tourlink.attractionservice.controller;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.tourlink.attractionservice.dto.AttractionFavoriteResponse;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.tourlink.attractionservice.entity.AttractionFavorite;
 import org.tourlink.attractionservice.service.AttractionFavoriteService;
@@ -25,8 +28,19 @@ public class AttractionFavoriteController {
     private final BehaviorEventSender behaviorEventSender;
 
     @GetMapping("/user/{userId}")
-    public ResponseEntity<List<AttractionFavorite>> getUserFavorites(@PathVariable Long userId) {
-        return ResponseEntity.ok(favoriteService.getFavoritesByUserId(userId));
+    public ResponseEntity<List<AttractionFavoriteResponse>> getUserFavorites(@PathVariable Long userId) {
+        List<AttractionFavorite> favorites = favoriteService.getFavoritesByUserId(userId);
+        List<AttractionFavoriteResponse> response = favorites.stream()
+            .map(favorite -> {
+                AttractionFavoriteResponse dto = new AttractionFavoriteResponse();
+                dto.setFavoriteId(favorite.getFavoriteId());
+                dto.setAttractionId(favorite.getAttraction().getId());
+                dto.setUserId(favorite.getUserId());
+                dto.setCreatedTime(favorite.getCreatedTime());
+                return dto;
+            })
+            .toList();
+        return ResponseEntity.ok(response);
     }
 
     @GetMapping("/attraction/{attractionId}/user/{userId}")
