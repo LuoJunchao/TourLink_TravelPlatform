@@ -43,7 +43,7 @@ public class BlogController {
     }
 
     // 批量获取博客详情
-    @GetMapping("/batch")
+    @PostMapping("/batch")
     public ResponseEntity<List<BlogResponse>> getBlogs(@RequestBody List<Long> blogIds) {
         List<BlogResponse> responses = blogService.getBlogs(blogIds);
         return ResponseEntity.ok(responses);
