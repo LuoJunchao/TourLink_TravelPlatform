@@ -1,11 +1,11 @@
 package org.tourlink.attractionservice.controller;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.tourlink.attractionservice.dto.AttractionFavoriteResponse;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.tourlink.attractionservice.entity.AttractionFavorite;
 import org.tourlink.attractionservice.service.AttractionFavoriteService;
@@ -14,11 +14,11 @@ import org.tourlink.attractionservice.service.event.BehaviorEventSender;
 import org.tourlink.common.dto.dataPlatformDTO.UserBehaviorMessage;
 
 import java.time.LocalDateTime;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/attraction-favorites")
 @RequiredArgsConstructor
+@Slf4j
 public class AttractionFavoriteController {
 
     private final AttractionFavoriteService favoriteService;
@@ -79,6 +79,17 @@ public class AttractionFavoriteController {
         AttractionFavorite favorite = new AttractionFavorite();
         favorite.setAttraction(attractionService.getAttractionEntityById(attractionId));
         favorite.setUserId(userId);
+
+        // 发送行为消息
+        UserBehaviorMessage message = new UserBehaviorMessage(
+                String.valueOf(favorite.getUserId()),
+                "ATTRACTION",
+                favorite.getAttraction().getId(),
+                "COLLECT",
+                LocalDateTime.now()
+        );
+        log.info("Sending user behavior message: {}", message);
+        behaviorEventSender.send(message);
 
         return ResponseEntity.ok(favoriteService.addFavorite(favorite));
     }
